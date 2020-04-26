@@ -10,6 +10,38 @@
 		2C49EA1B24358DB40026233D /* EasyStackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C49EA1124358DB40026233D /* EasyStackView.framework */; };
 		2C49EA2024358DB40026233D /* EasyStackViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA1F24358DB40026233D /* EasyStackViewTests.m */; };
 		2C49EA2224358DB40026233D /* EasyStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C49EA1424358DB40026233D /* EasyStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C49EA3224358DC90026233D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA3124358DC90026233D /* AppDelegate.swift */; };
+		2C49EA3424358DC90026233D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA3324358DC90026233D /* SceneDelegate.swift */; };
+		2C49EA3624358DC90026233D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA3524358DC90026233D /* ViewController.swift */; };
+		2C49EA3924358DC90026233D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49EA3724358DC90026233D /* Main.storyboard */; };
+		2C49EA3B24358DCB0026233D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C49EA3A24358DCB0026233D /* Assets.xcassets */; };
+		2C49EA3E24358DCB0026233D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49EA3C24358DCB0026233D /* LaunchScreen.storyboard */; };
+		2C49EA4924358DCB0026233D /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA4824358DCB0026233D /* DemoTests.swift */; };
+		2C49EA5424358DCB0026233D /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA5324358DCB0026233D /* DemoUITests.swift */; };
+		2C49EA6124358E3F0026233D /* ESVStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C49EA5F24358E3F0026233D /* ESVStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C49EA6224358E3F0026233D /* ESVStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA6024358E3F0026233D /* ESVStackView.m */; };
+		2C52A259243F2755008FFD73 /* ESVEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A258243F272F008FFD73 /* ESVEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C52A2B02440CE17008FFD73 /* ESVItemManageType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A2AE2440CE17008FFD73 /* ESVItemManageType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C52A2B42440CEBC008FFD73 /* ESVFlexManageType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A2B22440CEBC008FFD73 /* ESVFlexManageType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C52A2B82440D055008FFD73 /* ESVConfigManageType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A2B62440D055008FFD73 /* ESVConfigManageType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C52A32E24440606008FFD73 /* ESVRefreshManageType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A32C24440606008FFD73 /* ESVRefreshManageType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C52A33224440651008FFD73 /* ESVCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A33024440651008FFD73 /* ESVCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C52A33324440651008FFD73 /* ESVCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52A33124440651008FFD73 /* ESVCalculator.m */; };
+		2C52A3362444086E008FFD73 /* ESVStackItemConfig+Axis.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A3342444086E008FFD73 /* ESVStackItemConfig+Axis.h */; };
+		2C52A3372444086E008FFD73 /* ESVStackItemConfig+Axis.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52A3352444086E008FFD73 /* ESVStackItemConfig+Axis.m */; };
+		2C84BC042446F103000FBB20 /* ESVStackPlaceHolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C84BC022446F103000FBB20 /* ESVStackPlaceHolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C84BC052446F103000FBB20 /* ESVStackPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C84BC032446F103000FBB20 /* ESVStackPlaceHolder.m */; };
+		2C84BC082446F1E9000FBB20 /* ESVStackItemType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C84BC062446F1E9000FBB20 /* ESVStackItemType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C84BC0C2446FF81000FBB20 /* UIView+ESV.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C84BC0A2446FF81000FBB20 /* UIView+ESV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C84BC0D2446FF81000FBB20 /* UIView+ESV.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C84BC0B2446FF81000FBB20 /* UIView+ESV.m */; };
+		2CDD5AA0244F1E1800068C1D /* ESVScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDD5A9E244F1E1800068C1D /* ESVScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDD5AA1244F1E1800068C1D /* ESVScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD5A9F244F1E1800068C1D /* ESVScrollView.m */; };
+		2CF1251D243C58ED00DC254C /* ESVFrameUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF1251B243C58ED00DC254C /* ESVFrameUtil.h */; };
+		2CF1251E243C58ED00DC254C /* ESVFrameUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1251C243C58ED00DC254C /* ESVFrameUtil.m */; };
+		2CF12520243C62C500DC254C /* EasyStackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C49EA1124358DB40026233D /* EasyStackView.framework */; };
+		2CF12521243C62C500DC254C /* EasyStackView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C49EA1124358DB40026233D /* EasyStackView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9CE3A6DBAD52A6AAE7EA04C5 /* ESVStackItemConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3A61CCC1810D020122FB8 /* ESVStackItemConfig.m */; };
+		9CE3A97067E032885ACEBB18 /* ESVStackItemConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE3A8D6497A87D47024BCAA /* ESVStackItemConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +52,87 @@
 			remoteGlobalIDString = 2C49EA1024358DB40026233D;
 			remoteInfo = EasyStackView;
 		};
+		2C49EA4524358DCB0026233D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C49EA0824358DB40026233D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C49EA2E24358DC90026233D;
+			remoteInfo = Demo;
+		};
+		2C49EA5024358DCB0026233D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C49EA0824358DB40026233D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C49EA2E24358DC90026233D;
+			remoteInfo = Demo;
+		};
+		2CF12522243C62C500DC254C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C49EA0824358DB40026233D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C49EA1024358DB40026233D;
+			remoteInfo = EasyStackView;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2CF12524243C62C500DC254C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2CF12521243C62C500DC254C /* EasyStackView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2C002E03245602A300364C88 /* EasyStackView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = EasyStackView.podspec; sourceTree = "<group>"; };
 		2C49EA1124358DB40026233D /* EasyStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C49EA1424358DB40026233D /* EasyStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyStackView.h; sourceTree = "<group>"; };
 		2C49EA1524358DB40026233D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C49EA1A24358DB40026233D /* EasyStackViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyStackViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C49EA1F24358DB40026233D /* EasyStackViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyStackViewTests.m; sourceTree = "<group>"; };
 		2C49EA2124358DB40026233D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C49EA2F24358DC90026233D /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C49EA3124358DC90026233D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C49EA3324358DC90026233D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2C49EA3524358DC90026233D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C49EA3824358DC90026233D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C49EA3A24358DCB0026233D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C49EA3D24358DCB0026233D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C49EA3F24358DCB0026233D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C49EA4424358DCB0026233D /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C49EA4824358DCB0026233D /* DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTests.swift; sourceTree = "<group>"; };
+		2C49EA4A24358DCB0026233D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C49EA4F24358DCB0026233D /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C49EA5324358DCB0026233D /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
+		2C49EA5524358DCB0026233D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C49EA5F24358E3F0026233D /* ESVStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackView.h; sourceTree = "<group>"; };
+		2C49EA6024358E3F0026233D /* ESVStackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVStackView.m; sourceTree = "<group>"; };
+		2C52A258243F272F008FFD73 /* ESVEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVEnum.h; sourceTree = "<group>"; };
+		2C52A2AE2440CE17008FFD73 /* ESVItemManageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVItemManageType.h; sourceTree = "<group>"; };
+		2C52A2B22440CEBC008FFD73 /* ESVFlexManageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVFlexManageType.h; sourceTree = "<group>"; };
+		2C52A2B62440D055008FFD73 /* ESVConfigManageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVConfigManageType.h; sourceTree = "<group>"; };
+		2C52A32C24440606008FFD73 /* ESVRefreshManageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVRefreshManageType.h; sourceTree = "<group>"; };
+		2C52A33024440651008FFD73 /* ESVCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVCalculator.h; sourceTree = "<group>"; };
+		2C52A33124440651008FFD73 /* ESVCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVCalculator.m; sourceTree = "<group>"; };
+		2C52A3342444086E008FFD73 /* ESVStackItemConfig+Axis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ESVStackItemConfig+Axis.h"; sourceTree = "<group>"; };
+		2C52A3352444086E008FFD73 /* ESVStackItemConfig+Axis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ESVStackItemConfig+Axis.m"; sourceTree = "<group>"; };
+		2C84BC022446F103000FBB20 /* ESVStackPlaceHolder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackPlaceHolder.h; sourceTree = "<group>"; };
+		2C84BC032446F103000FBB20 /* ESVStackPlaceHolder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVStackPlaceHolder.m; sourceTree = "<group>"; };
+		2C84BC062446F1E9000FBB20 /* ESVStackItemType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackItemType.h; sourceTree = "<group>"; };
+		2C84BC0A2446FF81000FBB20 /* UIView+ESV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ESV.h"; sourceTree = "<group>"; };
+		2C84BC0B2446FF81000FBB20 /* UIView+ESV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ESV.m"; sourceTree = "<group>"; };
+		2CDD5A9E244F1E1800068C1D /* ESVScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVScrollView.h; sourceTree = "<group>"; };
+		2CDD5A9F244F1E1800068C1D /* ESVScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVScrollView.m; sourceTree = "<group>"; };
+		2CF1251B243C58ED00DC254C /* ESVFrameUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVFrameUtil.h; sourceTree = "<group>"; };
+		2CF1251C243C58ED00DC254C /* ESVFrameUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVFrameUtil.m; sourceTree = "<group>"; };
+		9CE3A61CCC1810D020122FB8 /* ESVStackItemConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESVStackItemConfig.m; sourceTree = "<group>"; };
+		9CE3A8D6497A87D47024BCAA /* ESVStackItemConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESVStackItemConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,15 +151,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C49EA2C24358DC90026233D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF12520243C62C500DC254C /* EasyStackView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C49EA4124358DCB0026233D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C49EA4C24358DCB0026233D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2C49EA0724358DB40026233D = {
 			isa = PBXGroup;
 			children = (
+				2C002E03245602A300364C88 /* EasyStackView.podspec */,
 				2C49EA1324358DB40026233D /* EasyStackView */,
 				2C49EA1E24358DB40026233D /* EasyStackViewTests */,
+				2C49EA3024358DC90026233D /* Demo */,
+				2C49EA4724358DCB0026233D /* DemoTests */,
+				2C49EA5224358DCB0026233D /* DemoUITests */,
 				2C49EA1224358DB40026233D /* Products */,
+				2CF1251F243C62C500DC254C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +195,9 @@
 			children = (
 				2C49EA1124358DB40026233D /* EasyStackView.framework */,
 				2C49EA1A24358DB40026233D /* EasyStackViewTests.xctest */,
+				2C49EA2F24358DC90026233D /* Demo.app */,
+				2C49EA4424358DCB0026233D /* DemoTests.xctest */,
+				2C49EA4F24358DCB0026233D /* DemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,7 +205,19 @@
 		2C49EA1324358DB40026233D /* EasyStackView */ = {
 			isa = PBXGroup;
 			children = (
+				2CDD5AA3244F23F600068C1D /* ScrollView */,
+				2CDD5AA2244F23CE00068C1D /* StackView */,
+				2CDD5A9D244F1D8C00068C1D /* Protocol */,
 				2C49EA1424358DB40026233D /* EasyStackView.h */,
+				2C52A258243F272F008FFD73 /* ESVEnum.h */,
+				2C84BC0A2446FF81000FBB20 /* UIView+ESV.h */,
+				2C84BC0B2446FF81000FBB20 /* UIView+ESV.m */,
+				9CE3A8D6497A87D47024BCAA /* ESVStackItemConfig.h */,
+				9CE3A61CCC1810D020122FB8 /* ESVStackItemConfig.m */,
+				2CF1251B243C58ED00DC254C /* ESVFrameUtil.h */,
+				2CF1251C243C58ED00DC254C /* ESVFrameUtil.m */,
+				2C52A3342444086E008FFD73 /* ESVStackItemConfig+Axis.h */,
+				2C52A3352444086E008FFD73 /* ESVStackItemConfig+Axis.m */,
 				2C49EA1524358DB40026233D /* Info.plist */,
 			);
 			path = EasyStackView;
@@ -86,6 +232,79 @@
 			path = EasyStackViewTests;
 			sourceTree = "<group>";
 		};
+		2C49EA3024358DC90026233D /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				2C49EA3124358DC90026233D /* AppDelegate.swift */,
+				2C49EA3324358DC90026233D /* SceneDelegate.swift */,
+				2C49EA3524358DC90026233D /* ViewController.swift */,
+				2C49EA3724358DC90026233D /* Main.storyboard */,
+				2C49EA3A24358DCB0026233D /* Assets.xcassets */,
+				2C49EA3C24358DCB0026233D /* LaunchScreen.storyboard */,
+				2C49EA3F24358DCB0026233D /* Info.plist */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		2C49EA4724358DCB0026233D /* DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C49EA4824358DCB0026233D /* DemoTests.swift */,
+				2C49EA4A24358DCB0026233D /* Info.plist */,
+			);
+			path = DemoTests;
+			sourceTree = "<group>";
+		};
+		2C49EA5224358DCB0026233D /* DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C49EA5324358DCB0026233D /* DemoUITests.swift */,
+				2C49EA5524358DCB0026233D /* Info.plist */,
+			);
+			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		2CDD5A9D244F1D8C00068C1D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2C84BC062446F1E9000FBB20 /* ESVStackItemType.h */,
+				2C52A2AE2440CE17008FFD73 /* ESVItemManageType.h */,
+				2C52A2B22440CEBC008FFD73 /* ESVFlexManageType.h */,
+				2C52A2B62440D055008FFD73 /* ESVConfigManageType.h */,
+				2C52A32C24440606008FFD73 /* ESVRefreshManageType.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		2CDD5AA2244F23CE00068C1D /* StackView */ = {
+			isa = PBXGroup;
+			children = (
+				2C49EA5F24358E3F0026233D /* ESVStackView.h */,
+				2C49EA6024358E3F0026233D /* ESVStackView.m */,
+				2C84BC022446F103000FBB20 /* ESVStackPlaceHolder.h */,
+				2C84BC032446F103000FBB20 /* ESVStackPlaceHolder.m */,
+				2C52A33024440651008FFD73 /* ESVCalculator.h */,
+				2C52A33124440651008FFD73 /* ESVCalculator.m */,
+			);
+			path = StackView;
+			sourceTree = "<group>";
+		};
+		2CDD5AA3244F23F600068C1D /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				2CDD5A9E244F1E1800068C1D /* ESVScrollView.h */,
+				2CDD5A9F244F1E1800068C1D /* ESVScrollView.m */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		2CF1251F243C62C500DC254C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -94,6 +313,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C49EA2224358DB40026233D /* EasyStackView.h in Headers */,
+				2C52A2B02440CE17008FFD73 /* ESVItemManageType.h in Headers */,
+				2C52A2B82440D055008FFD73 /* ESVConfigManageType.h in Headers */,
+				2C49EA6124358E3F0026233D /* ESVStackView.h in Headers */,
+				2C52A32E24440606008FFD73 /* ESVRefreshManageType.h in Headers */,
+				2C52A33224440651008FFD73 /* ESVCalculator.h in Headers */,
+				2C84BC042446F103000FBB20 /* ESVStackPlaceHolder.h in Headers */,
+				2C52A3362444086E008FFD73 /* ESVStackItemConfig+Axis.h in Headers */,
+				2C84BC082446F1E9000FBB20 /* ESVStackItemType.h in Headers */,
+				9CE3A97067E032885ACEBB18 /* ESVStackItemConfig.h in Headers */,
+				2C84BC0C2446FF81000FBB20 /* UIView+ESV.h in Headers */,
+				2CF1251D243C58ED00DC254C /* ESVFrameUtil.h in Headers */,
+				2C52A259243F2755008FFD73 /* ESVEnum.h in Headers */,
+				2C52A2B42440CEBC008FFD73 /* ESVFlexManageType.h in Headers */,
+				2CDD5AA0244F1E1800068C1D /* ESVScrollView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,20 +369,88 @@
 			productReference = 2C49EA1A24358DB40026233D /* EasyStackViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		2C49EA2E24358DC90026233D /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C49EA5624358DCB0026233D /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				2C49EA2B24358DC90026233D /* Sources */,
+				2C49EA2C24358DC90026233D /* Frameworks */,
+				2C49EA2D24358DC90026233D /* Resources */,
+				2CF12524243C62C500DC254C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CF12523243C62C500DC254C /* PBXTargetDependency */,
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = 2C49EA2F24358DC90026233D /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C49EA4324358DCB0026233D /* DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C49EA5924358DCB0026233D /* Build configuration list for PBXNativeTarget "DemoTests" */;
+			buildPhases = (
+				2C49EA4024358DCB0026233D /* Sources */,
+				2C49EA4124358DCB0026233D /* Frameworks */,
+				2C49EA4224358DCB0026233D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C49EA4624358DCB0026233D /* PBXTargetDependency */,
+			);
+			name = DemoTests;
+			productName = DemoTests;
+			productReference = 2C49EA4424358DCB0026233D /* DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2C49EA4E24358DCB0026233D /* DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C49EA5C24358DCB0026233D /* Build configuration list for PBXNativeTarget "DemoUITests" */;
+			buildPhases = (
+				2C49EA4B24358DCB0026233D /* Sources */,
+				2C49EA4C24358DCB0026233D /* Frameworks */,
+				2C49EA4D24358DCB0026233D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C49EA5124358DCB0026233D /* PBXTargetDependency */,
+			);
+			name = DemoUITests;
+			productName = DemoUITests;
+			productReference = 2C49EA4F24358DCB0026233D /* DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2C49EA0824358DB40026233D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Elenion;
 				TargetAttributes = {
 					2C49EA1024358DB40026233D = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					2C49EA1924358DB40026233D = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					2C49EA2E24358DC90026233D = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					2C49EA4324358DCB0026233D = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 2C49EA2E24358DC90026233D;
+					};
+					2C49EA4E24358DCB0026233D = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 2C49EA2E24358DC90026233D;
 					};
 				};
 			};
@@ -168,6 +469,9 @@
 			targets = (
 				2C49EA1024358DB40026233D /* EasyStackView */,
 				2C49EA1924358DB40026233D /* EasyStackViewTests */,
+				2C49EA2E24358DC90026233D /* Demo */,
+				2C49EA4324358DCB0026233D /* DemoTests */,
+				2C49EA4E24358DCB0026233D /* DemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +491,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C49EA2D24358DC90026233D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C49EA3E24358DCB0026233D /* LaunchScreen.storyboard in Resources */,
+				2C49EA3B24358DCB0026233D /* Assets.xcassets in Resources */,
+				2C49EA3924358DC90026233D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C49EA4224358DCB0026233D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C49EA4D24358DCB0026233D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,6 +522,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C49EA6224358E3F0026233D /* ESVStackView.m in Sources */,
+				2CF1251E243C58ED00DC254C /* ESVFrameUtil.m in Sources */,
+				2CDD5AA1244F1E1800068C1D /* ESVScrollView.m in Sources */,
+				2C52A33324440651008FFD73 /* ESVCalculator.m in Sources */,
+				2C84BC052446F103000FBB20 /* ESVStackPlaceHolder.m in Sources */,
+				9CE3A6DBAD52A6AAE7EA04C5 /* ESVStackItemConfig.m in Sources */,
+				2C52A3372444086E008FFD73 /* ESVStackItemConfig+Axis.m in Sources */,
+				2C84BC0D2446FF81000FBB20 /* UIView+ESV.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +541,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C49EA2B24358DC90026233D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C49EA3624358DC90026233D /* ViewController.swift in Sources */,
+				2C49EA3224358DC90026233D /* AppDelegate.swift in Sources */,
+				2C49EA3424358DC90026233D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C49EA4024358DCB0026233D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C49EA4924358DCB0026233D /* DemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C49EA4B24358DCB0026233D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C49EA5424358DCB0026233D /* DemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -213,7 +575,41 @@
 			target = 2C49EA1024358DB40026233D /* EasyStackView */;
 			targetProxy = 2C49EA1C24358DB40026233D /* PBXContainerItemProxy */;
 		};
+		2C49EA4624358DCB0026233D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C49EA2E24358DC90026233D /* Demo */;
+			targetProxy = 2C49EA4524358DCB0026233D /* PBXContainerItemProxy */;
+		};
+		2C49EA5124358DCB0026233D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C49EA2E24358DC90026233D /* Demo */;
+			targetProxy = 2C49EA5024358DCB0026233D /* PBXContainerItemProxy */;
+		};
+		2CF12523243C62C500DC254C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C49EA1024358DB40026233D /* EasyStackView */;
+			targetProxy = 2CF12522243C62C500DC254C /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C49EA3724358DC90026233D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C49EA3824358DC90026233D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C49EA3C24358DCB0026233D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C49EA3D24358DCB0026233D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2C49EA2324358DB40026233D /* Debug */ = {
@@ -326,6 +722,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -335,6 +732,7 @@
 		2C49EA2624358DB40026233D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -350,6 +748,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elenion.EasyStackView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -357,6 +757,7 @@
 		2C49EA2724358DB40026233D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -372,6 +773,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elenion.EasyStackView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -408,6 +810,132 @@
 			};
 			name = Release;
 		};
+		2C49EA5724358DCB0026233D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elenion.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C49EA5824358DCB0026233D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elenion.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2C49EA5A24358DCB0026233D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elenion.DemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
+			};
+			name = Debug;
+		};
+		2C49EA5B24358DCB0026233D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elenion.DemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
+			};
+			name = Release;
+		};
+		2C49EA5D24358DCB0026233D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elenion.DemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Demo;
+			};
+			name = Debug;
+		};
+		2C49EA5E24358DCB0026233D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.elenion.DemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Demo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -434,6 +962,33 @@
 			buildConfigurations = (
 				2C49EA2924358DB40026233D /* Debug */,
 				2C49EA2A24358DB40026233D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C49EA5624358DCB0026233D /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C49EA5724358DCB0026233D /* Debug */,
+				2C49EA5824358DCB0026233D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C49EA5924358DCB0026233D /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C49EA5A24358DCB0026233D /* Debug */,
+				2C49EA5B24358DCB0026233D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C49EA5C24358DCB0026233D /* Build configuration list for PBXNativeTarget "DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C49EA5D24358DCB0026233D /* Debug */,
+				2C49EA5E24358DCB0026233D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
