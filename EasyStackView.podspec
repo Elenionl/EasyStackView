@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.author       = { "Elenion" => "stellanxu@gmail.com" }
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "git@github.com:Elenionl/EasyStackView.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/Elenionl/EasyStackView.git", :tag => "#{s.version}" }
 
-  s.source_files  = "EasyStackView"
+  s.source_files  = "EasyStackView/**/*.{h,m}"
 end
