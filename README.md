@@ -22,6 +22,22 @@ Use this firm to find `podfile` script for your project.
 
 ## How to use
 
+There are three kinds of flex container right now:
+`ESVStackView`
+`ESVStackPlaceHolder`
+`ESVScrollView`
+`ESVRecycleView`
+
+`ESVStackView` is just a simple view will layout its arranged items with flex layout.
+
+`ESVStackPlaceHolder` works just the same as `ESVStackView` but it is not a subclass of `UIView`. It works as an abstract container to laytou its arranged items. You can use it to arrange complex layout without creating too much unnecessary view hierarchy.
+
+*Attention:* `ESVStackPlaceHolder` instance should not be the root of an flex layout tree.
+
+`ESVScrollView` is a Scroll View with flex layout inside.
+
+`ESVRecycleView` is a Scroll View with flex layout inside as long as **item reuse feature**.
+
 ``` Swift
 let item = ESVStackView()
 item.flexDirection = .row
@@ -58,19 +74,6 @@ item.addArrangedItem(view4)
 ```
 
 ## Features
-
-There are three kinds of flex container right now:
-`ESVStackView`
-`ESVStackPlaceHolder`
-`ESVScrollView`
-
-`ESVStackView` is just a simple view will layout its arranged items with flex layout.
-
-`ESVStackPlaceHolder` works just the same as `ESVStackView` but it is not a subclass of `UIView`. It works as an abstract container to laytou its arranged items. You can use it to arrange complex layout without creating too much unnecessary view hierarchy.
-
-*Attention:* `ESVStackPlaceHolder` instance should not be the root of an flex layout tree.
-
-`ESVScrollView` is a Scroll View with flex layout inside.
 
 ---
 
@@ -226,8 +229,8 @@ Each arrange item is associated with its `ESVStackItemConfig` config object. You
 
 ## TODO
 
-[●] Scroll view with flex layout
+[●] Scroll view with flex layout.
+
+[●] Scroll view with view reusable, in order to replace `UITableView`.
 
 [○] Try to make EasyStackView's behavior quite the same with Web flex layout.
-
-[○] Scroll view with view reusable, in order to replace `UICollectionView`.

@@ -31,14 +31,14 @@ class Sample3ViewController: UIViewController {
         recycle.registerGenerator({ () -> UIView & ESVRecycleCellType in
             return Display()
         }, forIdentifier: "display")
-//        recycle.flexDirection = .row
-        recycle.alignItems = .flexStart
+        recycle.flexDirection = .row
+        recycle.alignItems = .center
 //        recycle.justifyContent = .flexStart
         self.view.addSubview(recycle)
         recycle.addArrangedItems(models)
         models.forEach { (model) in
             recycle.manageConfig(of: model) { (config) in
-                config?.margin = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 0)
+                config?.margin = UIEdgeInsets(top: 150, left: 5, bottom: 5, right: 0)
             }
         }
     }
@@ -70,7 +70,7 @@ class Sample3ViewController: UIViewController {
             ESVRecyclableModel(),
         ]
         result.forEach { (model) in
-            model.frame = CGRect(x: 0, y: 0, width: 100 + Int(arc4random()) % 200, height: 60 + Int(arc4random()) % 120)
+            model.frame = CGRect(x: 0, y: 0, width: 10 + Int(arc4random()) % 20, height: 120 + Int(arc4random()) % 240)
             model.identifier = "display"
         }
         return result
