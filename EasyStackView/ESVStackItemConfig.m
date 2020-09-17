@@ -14,7 +14,7 @@
 
 @implementation ESVStackItemConfig
 
-- (instancetype)initWithItem:(id <ESVStackItemType>)item {
+- (instancetype)initWithItem:(id<ESVStackItemType>)item {
     self = [super init];
     if (self) {
         _item = item;

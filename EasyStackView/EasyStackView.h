@@ -15,6 +15,7 @@ FOUNDATION_EXPORT double EasyStackViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char EasyStackViewVersionString[];
 
 #import <EasyStackView/ESVStackView.h>
+#import <EasyStackView/ESVStackControl.h>
 #import <EasyStackView/ESVStackPlaceHolder.h>
 #import <EasyStackView/ESVScrollView.h>
 #import <EasyStackView/ESVStackItemConfig.h>
@@ -24,4 +25,6 @@ FOUNDATION_EXPORT const unsigned char EasyStackViewVersionString[];
 #import <EasyStackView/ESVFlexManageType.h>
 #import <EasyStackView/ESVConfigManageType.h>
 #import <EasyStackView/ESVRefreshManageType.h>
-
+#import <EasyStackView/ESVRecycleView.h>
+#import <EasyStackView/ESVRecycleCellType.h>
+#import <EasyStackView/ESVRecyclableModel.h>

@@ -215,7 +215,7 @@
             [growthable addObject:config];
         }
     }
-    if (!growthable) {
+    if (!growthable.count) {
         return space;
     }
     CGFloat ratio = 1 + space / total;
@@ -280,7 +280,9 @@
 }
 
 + (void)updateBetweenMargins:(NSMutableArray<NSNumber *> *)margins space:(CGFloat)space {
-    NSParameterAssert(space >= 0);
+    if (space < 0) {
+        return;
+    }
     if (margins.count < 3) {
         return;
     }

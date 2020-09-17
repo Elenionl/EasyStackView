@@ -1,19 +1,19 @@
 //
-//  ESVScrollView.m
+//  ESVControl.m
 //  EasyStackView
 //
-//  Created by Elenion on 2020/4/21.
+//  Created by Elenion on 2020/7/20.
 //  Copyright © 2020 Elenion. All rights reserved.
 //
 
-#import "ESVScrollView.h"
+#import "ESVStackControl.h"
 #import "ESVStackItemConfig.h"
 #import "ESVFrameUtil.h"
 #import "ESVCalculator.h"
 #import "UIView+ESV.h"
 #import "ESVStackPlaceHolder.h"
-
-@interface ESVScrollView ()
+ 
+@interface ESVStackControl ()
 
 @property (nonatomic, strong) NSMutableArray<NSObject<ESVStackItemType> *> *privateArrangedItems;
 @property (nonatomic, strong) NSMutableArray<__kindof ESVStackItemConfig *> *arrangedConfigs;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation ESVScrollView
+@implementation ESVStackControl
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -91,7 +91,7 @@
 
 - (NSArray<UIView *> *)managedViews {
     NSMutableArray<UIView *> *managedViews = NSMutableArray.new;
-    for (NSObject<ESVStackItemType> *item in self.privateArrangedItems) {
+    for (NSObject<ESVStackItemType> * item in self.privateArrangedItems) {
         if ([item isKindOfClass:UIView.class]) {
             [managedViews addObject:(UIView *)item];
         } else if ([item conformsToProtocol:@protocol(ESVItemManageType)]) {
@@ -207,17 +207,7 @@
         }
     }
     if (self.dirty) {
-        CGSize boundsSize = self.bounds.size;
-        UIEdgeInsets insets;
-        if (@available(iOS 11.0, *)) {
-            insets = self.adjustedContentInset;
-        } else {
-            insets = self.contentInset;
-        }
-        CGSize current = CGSizeMake(boundsSize.width - insets.left - insets.right, boundsSize.height - insets.top - insets.bottom);
-        self.preferredSizeCache = [ESVCalculator scrollViewLayoutWithSize:current flexConfig:self arrangedConfigs:self.arrangedConfigs];
-        CGSize result = CGSizeMake(MAX(current.width, self.preferredSizeCache.width), MAX(current.height, self.preferredSizeCache.height));
-        self.contentSize = result;
+        self.preferredSizeCache = [ESVCalculator layoutWithSize:self.bounds.size flexConfig:self arrangedConfigs:self.arrangedConfigs];
         self.dirty = false;
     }
 }

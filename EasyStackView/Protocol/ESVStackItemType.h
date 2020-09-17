@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ESVStackItemType <NSObject>
 
 @property (readonly, nonatomic) CGRect bounds;
+
 @property (nonatomic) CGRect frame;
+
 - (void)setNeedsLayout;
 
 - (void)esv_removeFromSuperitem;

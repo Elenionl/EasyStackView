@@ -11,9 +11,7 @@
 		2C49EA2024358DB40026233D /* EasyStackViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA1F24358DB40026233D /* EasyStackViewTests.m */; };
 		2C49EA2224358DB40026233D /* EasyStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C49EA1424358DB40026233D /* EasyStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C49EA3224358DC90026233D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA3124358DC90026233D /* AppDelegate.swift */; };
-		2C49EA3424358DC90026233D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA3324358DC90026233D /* SceneDelegate.swift */; };
 		2C49EA3624358DC90026233D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA3524358DC90026233D /* ViewController.swift */; };
-		2C49EA3924358DC90026233D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49EA3724358DC90026233D /* Main.storyboard */; };
 		2C49EA3B24358DCB0026233D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C49EA3A24358DCB0026233D /* Assets.xcassets */; };
 		2C49EA3E24358DCB0026233D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49EA3C24358DCB0026233D /* LaunchScreen.storyboard */; };
 		2C49EA4924358DCB0026233D /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA4824358DCB0026233D /* DemoTests.swift */; };
@@ -29,13 +27,27 @@
 		2C52A33324440651008FFD73 /* ESVCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52A33124440651008FFD73 /* ESVCalculator.m */; };
 		2C52A3362444086E008FFD73 /* ESVStackItemConfig+Axis.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A3342444086E008FFD73 /* ESVStackItemConfig+Axis.h */; };
 		2C52A3372444086E008FFD73 /* ESVStackItemConfig+Axis.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52A3352444086E008FFD73 /* ESVStackItemConfig+Axis.m */; };
+		2C61367724D5BC6B00289776 /* ESVCoupleSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C61367524D5BC6A00289776 /* ESVCoupleSet.h */; };
+		2C61367A24D5C98C00289776 /* ESVCoupleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61367924D5C98C00289776 /* ESVCoupleSet.m */; };
+		2C61367C24D5CF4D00289776 /* Sample3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61367B24D5CF4D00289776 /* Sample3ViewController.swift */; };
+		2C65A7AC24C58A2300D98D5E /* ESVStackControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C65A7AA24C58A2300D98D5E /* ESVStackControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C65A7AD24C58A2300D98D5E /* ESVStackControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65A7AB24C58A2300D98D5E /* ESVStackControl.m */; };
+		2C65A7AF24C58F4600D98D5E /* Sample1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C65A7AE24C58F4600D98D5E /* Sample1ViewController.swift */; };
+		2C65A7B124C5A42A00D98D5E /* Sample2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C65A7B024C5A42A00D98D5E /* Sample2ViewController.swift */; };
+		2C65A7B724C6771500D98D5E /* ESVRecycleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C65A7B524C6771500D98D5E /* ESVRecycleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C65A7B824C6771500D98D5E /* ESVRecycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65A7B624C6771500D98D5E /* ESVRecycleView.m */; };
 		2C84BC042446F103000FBB20 /* ESVStackPlaceHolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C84BC022446F103000FBB20 /* ESVStackPlaceHolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C84BC052446F103000FBB20 /* ESVStackPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C84BC032446F103000FBB20 /* ESVStackPlaceHolder.m */; };
 		2C84BC082446F1E9000FBB20 /* ESVStackItemType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C84BC062446F1E9000FBB20 /* ESVStackItemType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C84BC0C2446FF81000FBB20 /* UIView+ESV.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C84BC0A2446FF81000FBB20 /* UIView+ESV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C84BC0D2446FF81000FBB20 /* UIView+ESV.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C84BC0B2446FF81000FBB20 /* UIView+ESV.m */; };
+		2CBC6D9F24D17BC000070DF0 /* ESVRecyclableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CBC6D9D24D17BC000070DF0 /* ESVRecyclableModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CBC6DA024D17BC000070DF0 /* ESVRecyclableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC6D9E24D17BC000070DF0 /* ESVRecyclableModel.m */; };
+		2CC3686225128C2000DC7191 /* ESVRecycleCellType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC3686025128C2000DC7191 /* ESVRecycleCellType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CDD5AA0244F1E1800068C1D /* ESVScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDD5A9E244F1E1800068C1D /* ESVScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CDD5AA1244F1E1800068C1D /* ESVScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD5A9F244F1E1800068C1D /* ESVScrollView.m */; };
+		2CE80DD524F6AB7600B3D5EC /* ESVRecycleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE80DD324F6AB7600B3D5EC /* ESVRecycleManager.h */; };
+		2CE80DD624F6AB7600B3D5EC /* ESVRecycleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE80DD424F6AB7600B3D5EC /* ESVRecycleManager.m */; };
 		2CF1251D243C58ED00DC254C /* ESVFrameUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF1251B243C58ED00DC254C /* ESVFrameUtil.h */; };
 		2CF1251E243C58ED00DC254C /* ESVFrameUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF1251C243C58ED00DC254C /* ESVFrameUtil.m */; };
 		2CF12520243C62C500DC254C /* EasyStackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C49EA1124358DB40026233D /* EasyStackView.framework */; };
@@ -99,9 +111,7 @@
 		2C49EA2124358DB40026233D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C49EA2F24358DC90026233D /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C49EA3124358DC90026233D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C49EA3324358DC90026233D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C49EA3524358DC90026233D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C49EA3824358DC90026233D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C49EA3A24358DCB0026233D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C49EA3D24358DCB0026233D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C49EA3F24358DCB0026233D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,13 +132,27 @@
 		2C52A33124440651008FFD73 /* ESVCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVCalculator.m; sourceTree = "<group>"; };
 		2C52A3342444086E008FFD73 /* ESVStackItemConfig+Axis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ESVStackItemConfig+Axis.h"; sourceTree = "<group>"; };
 		2C52A3352444086E008FFD73 /* ESVStackItemConfig+Axis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ESVStackItemConfig+Axis.m"; sourceTree = "<group>"; };
+		2C61367524D5BC6A00289776 /* ESVCoupleSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVCoupleSet.h; sourceTree = "<group>"; };
+		2C61367924D5C98C00289776 /* ESVCoupleSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESVCoupleSet.m; sourceTree = "<group>"; };
+		2C61367B24D5CF4D00289776 /* Sample3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample3ViewController.swift; sourceTree = "<group>"; };
+		2C65A7AA24C58A2300D98D5E /* ESVStackControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackControl.h; sourceTree = "<group>"; };
+		2C65A7AB24C58A2300D98D5E /* ESVStackControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVStackControl.m; sourceTree = "<group>"; };
+		2C65A7AE24C58F4600D98D5E /* Sample1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample1ViewController.swift; sourceTree = "<group>"; };
+		2C65A7B024C5A42A00D98D5E /* Sample2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample2ViewController.swift; sourceTree = "<group>"; };
+		2C65A7B524C6771500D98D5E /* ESVRecycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVRecycleView.h; sourceTree = "<group>"; };
+		2C65A7B624C6771500D98D5E /* ESVRecycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVRecycleView.m; sourceTree = "<group>"; };
 		2C84BC022446F103000FBB20 /* ESVStackPlaceHolder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackPlaceHolder.h; sourceTree = "<group>"; };
 		2C84BC032446F103000FBB20 /* ESVStackPlaceHolder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVStackPlaceHolder.m; sourceTree = "<group>"; };
 		2C84BC062446F1E9000FBB20 /* ESVStackItemType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackItemType.h; sourceTree = "<group>"; };
 		2C84BC0A2446FF81000FBB20 /* UIView+ESV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ESV.h"; sourceTree = "<group>"; };
 		2C84BC0B2446FF81000FBB20 /* UIView+ESV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ESV.m"; sourceTree = "<group>"; };
+		2CBC6D9D24D17BC000070DF0 /* ESVRecyclableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVRecyclableModel.h; sourceTree = "<group>"; };
+		2CBC6D9E24D17BC000070DF0 /* ESVRecyclableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVRecyclableModel.m; sourceTree = "<group>"; };
+		2CC3686025128C2000DC7191 /* ESVRecycleCellType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVRecycleCellType.h; sourceTree = "<group>"; };
 		2CDD5A9E244F1E1800068C1D /* ESVScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVScrollView.h; sourceTree = "<group>"; };
 		2CDD5A9F244F1E1800068C1D /* ESVScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVScrollView.m; sourceTree = "<group>"; };
+		2CE80DD324F6AB7600B3D5EC /* ESVRecycleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVRecycleManager.h; sourceTree = "<group>"; };
+		2CE80DD424F6AB7600B3D5EC /* ESVRecycleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVRecycleManager.m; sourceTree = "<group>"; };
 		2CF1251B243C58ED00DC254C /* ESVFrameUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVFrameUtil.h; sourceTree = "<group>"; };
 		2CF1251C243C58ED00DC254C /* ESVFrameUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVFrameUtil.m; sourceTree = "<group>"; };
 		9CE3A61CCC1810D020122FB8 /* ESVStackItemConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESVStackItemConfig.m; sourceTree = "<group>"; };
@@ -205,6 +229,8 @@
 		2C49EA1324358DB40026233D /* EasyStackView */ = {
 			isa = PBXGroup;
 			children = (
+				2C65A7B224C676C200D98D5E /* RecycleView */,
+				2C65A7A924C58A0D00D98D5E /* Control */,
 				2CDD5AA3244F23F600068C1D /* ScrollView */,
 				2CDD5AA2244F23CE00068C1D /* StackView */,
 				2CDD5A9D244F1D8C00068C1D /* Protocol */,
@@ -236,12 +262,13 @@
 			isa = PBXGroup;
 			children = (
 				2C49EA3124358DC90026233D /* AppDelegate.swift */,
-				2C49EA3324358DC90026233D /* SceneDelegate.swift */,
 				2C49EA3524358DC90026233D /* ViewController.swift */,
-				2C49EA3724358DC90026233D /* Main.storyboard */,
 				2C49EA3A24358DCB0026233D /* Assets.xcassets */,
 				2C49EA3C24358DCB0026233D /* LaunchScreen.storyboard */,
 				2C49EA3F24358DCB0026233D /* Info.plist */,
+				2C65A7AE24C58F4600D98D5E /* Sample1ViewController.swift */,
+				2C65A7B024C5A42A00D98D5E /* Sample2ViewController.swift */,
+				2C61367B24D5CF4D00289776 /* Sample3ViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -262,6 +289,31 @@
 				2C49EA5524358DCB0026233D /* Info.plist */,
 			);
 			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		2C65A7A924C58A0D00D98D5E /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				2C65A7AA24C58A2300D98D5E /* ESVStackControl.h */,
+				2C65A7AB24C58A2300D98D5E /* ESVStackControl.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		2C65A7B224C676C200D98D5E /* RecycleView */ = {
+			isa = PBXGroup;
+			children = (
+				2C65A7B524C6771500D98D5E /* ESVRecycleView.h */,
+				2C65A7B624C6771500D98D5E /* ESVRecycleView.m */,
+				2CC3686025128C2000DC7191 /* ESVRecycleCellType.h */,
+				2CBC6D9D24D17BC000070DF0 /* ESVRecyclableModel.h */,
+				2CBC6D9E24D17BC000070DF0 /* ESVRecyclableModel.m */,
+				2CE80DD324F6AB7600B3D5EC /* ESVRecycleManager.h */,
+				2CE80DD424F6AB7600B3D5EC /* ESVRecycleManager.m */,
+				2C61367524D5BC6A00289776 /* ESVCoupleSet.h */,
+				2C61367924D5C98C00289776 /* ESVCoupleSet.m */,
+			);
+			path = RecycleView;
 			sourceTree = "<group>";
 		};
 		2CDD5A9D244F1D8C00068C1D /* Protocol */ = {
@@ -313,15 +365,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C49EA2224358DB40026233D /* EasyStackView.h in Headers */,
+				2CBC6D9F24D17BC000070DF0 /* ESVRecyclableModel.h in Headers */,
+				2C65A7AC24C58A2300D98D5E /* ESVStackControl.h in Headers */,
 				2C52A2B02440CE17008FFD73 /* ESVItemManageType.h in Headers */,
 				2C52A2B82440D055008FFD73 /* ESVConfigManageType.h in Headers */,
+				2C65A7B724C6771500D98D5E /* ESVRecycleView.h in Headers */,
 				2C49EA6124358E3F0026233D /* ESVStackView.h in Headers */,
 				2C52A32E24440606008FFD73 /* ESVRefreshManageType.h in Headers */,
 				2C52A33224440651008FFD73 /* ESVCalculator.h in Headers */,
+				2CE80DD524F6AB7600B3D5EC /* ESVRecycleManager.h in Headers */,
+				2C61367724D5BC6B00289776 /* ESVCoupleSet.h in Headers */,
 				2C84BC042446F103000FBB20 /* ESVStackPlaceHolder.h in Headers */,
 				2C52A3362444086E008FFD73 /* ESVStackItemConfig+Axis.h in Headers */,
 				2C84BC082446F1E9000FBB20 /* ESVStackItemType.h in Headers */,
 				9CE3A97067E032885ACEBB18 /* ESVStackItemConfig.h in Headers */,
+				2CC3686225128C2000DC7191 /* ESVRecycleCellType.h in Headers */,
 				2C84BC0C2446FF81000FBB20 /* UIView+ESV.h in Headers */,
 				2CF1251D243C58ED00DC254C /* ESVFrameUtil.h in Headers */,
 				2C52A259243F2755008FFD73 /* ESVEnum.h in Headers */,
@@ -436,7 +494,7 @@
 				TargetAttributes = {
 					2C49EA1024358DB40026233D = {
 						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
+						LastSwiftMigration = 1200;
 					};
 					2C49EA1924358DB40026233D = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -497,7 +555,6 @@
 			files = (
 				2C49EA3E24358DCB0026233D /* LaunchScreen.storyboard in Resources */,
 				2C49EA3B24358DCB0026233D /* Assets.xcassets in Resources */,
-				2C49EA3924358DC90026233D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,11 +579,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C61367A24D5C98C00289776 /* ESVCoupleSet.m in Sources */,
+				2CBC6DA024D17BC000070DF0 /* ESVRecyclableModel.m in Sources */,
 				2C49EA6224358E3F0026233D /* ESVStackView.m in Sources */,
+				2C65A7B824C6771500D98D5E /* ESVRecycleView.m in Sources */,
 				2CF1251E243C58ED00DC254C /* ESVFrameUtil.m in Sources */,
 				2CDD5AA1244F1E1800068C1D /* ESVScrollView.m in Sources */,
 				2C52A33324440651008FFD73 /* ESVCalculator.m in Sources */,
 				2C84BC052446F103000FBB20 /* ESVStackPlaceHolder.m in Sources */,
+				2C65A7AD24C58A2300D98D5E /* ESVStackControl.m in Sources */,
+				2CE80DD624F6AB7600B3D5EC /* ESVRecycleManager.m in Sources */,
 				9CE3A6DBAD52A6AAE7EA04C5 /* ESVStackItemConfig.m in Sources */,
 				2C52A3372444086E008FFD73 /* ESVStackItemConfig+Axis.m in Sources */,
 				2C84BC0D2446FF81000FBB20 /* UIView+ESV.m in Sources */,
@@ -545,9 +607,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C65A7AF24C58F4600D98D5E /* Sample1ViewController.swift in Sources */,
+				2C65A7B124C5A42A00D98D5E /* Sample2ViewController.swift in Sources */,
 				2C49EA3624358DC90026233D /* ViewController.swift in Sources */,
 				2C49EA3224358DC90026233D /* AppDelegate.swift in Sources */,
-				2C49EA3424358DC90026233D /* SceneDelegate.swift in Sources */,
+				2C61367C24D5CF4D00289776 /* Sample3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,14 +657,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2C49EA3724358DC90026233D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C49EA3824358DC90026233D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C49EA3C24358DCB0026233D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -815,6 +871,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TV2WRE6V8Z;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -835,6 +892,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TV2WRE6V8Z;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (

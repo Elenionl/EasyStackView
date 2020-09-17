@@ -18,15 +18,21 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
             self.stackView.alignItems = .center
         }
+        stackView.addTarget(self, action: #selector(didTapItem), for: .touchUpInside)
     }
     
-    lazy var stackView: ESVStackView = {
-        let item = ESVStackView()
+    @objc func didTapItem() {
+        print("item")
+    }
+    
+    lazy var stackView: ESVStackControl = {
+        let item = ESVStackControl()
         item.flexDirection = .row
         item.alignItems = .flexStart
         item.justifyContent = .flexStart
         item.spaceBetween = 10
         let container = ESVScrollView(frame: CGRect(x: 0, y: 0, width: 300, height: 700))
+        container.backgroundColor = UIColor.yellow
         container.flexDirection = .row
         item.addArrangedItem(container)
         item.manageConfig(of: container) { (config) in
