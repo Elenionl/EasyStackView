@@ -21,7 +21,7 @@ Use this firm to find `podfile` script for your project.
 ```
 
 ## How to use
-![Demo1](https://raw.githubusercontent.com/Elenionl/EasyStackView/master/readme_image/WX20200918-003155%402x.png){:height="50%" width="50%"}
+![Demo1](https://raw.githubusercontent.com/Elenionl/EasyStackView/master/readme_image/WX20200918-003155%402x.png)
 ![Demo2](https://github.com/Elenionl/EasyStackView/blob/master/readme_image/WX20200918-003244@2x.png?raw=true)
 ![Demo1](https://github.com/Elenionl/EasyStackView/blob/master/readme_image/WX20200918-003619@2x.png?raw=true)
 
