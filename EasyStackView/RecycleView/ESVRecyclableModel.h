@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ESVRecyclableModelType <ESVStackItemType>
 
-@property (nonatomic, copy) NSString *identifier;
+@property (nonatomic, copy, nullable) NSString *identifier;
 
 @end
 

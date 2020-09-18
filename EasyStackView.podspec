@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "EasyStackView"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "Try this project to use flex layout is iOS native code."
   
   s.description  = <<-DESC

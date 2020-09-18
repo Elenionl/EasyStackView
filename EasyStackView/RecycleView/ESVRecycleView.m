@@ -313,6 +313,9 @@
 
 - (void)removeDisplayOfModels:(NSSet<NSObject<ESVRecyclableModelType> *> *)models {
     for (ESVRecyclableModel *model in models) {
+        if (!model.identifier) {
+            continue;
+        }
         __auto_type display = [self.displayingItem objectForKey:model];
         [self.displayingItem deleteKey:model];
         [display removeFromSuperview];
@@ -323,6 +326,9 @@
 
 - (void)addDisplayOfModels:(NSSet<ESVRecyclableModel *> *)models {
     for (ESVRecyclableModel *model in models) {
+        if (!model.identifier) {
+            continue;
+        }
         __auto_type view = [self.recycleManager getItemWithIdentifier:model.identifier];
         view.frame = model.frame;
         [view configWithModel:model index:[self.privateArrangedItems indexOfObject:model]];
