@@ -27,9 +27,13 @@ Use this firm to find `podfile` script for your project.
 
 
 There are three kinds of flex container right now:
+
 `ESVStackView`
+
 `ESVStackPlaceHolder`
+
 `ESVScrollView`
+
 `ESVRecycleView`
 
 `ESVStackView` is just a simple view will layout its arranged items with flex layout.
@@ -233,8 +237,8 @@ Each arrange item is associated with its `ESVStackItemConfig` config object. You
 
 ## TODO
 
-[●] Scroll view with flex layout.
+☑︎ Scroll view with flex layout.
 
-[●] Scroll view with view reusable, in order to replace `UITableView`.
+☑︎ Scroll view with view reusable, in order to replace `UITableView`.
 
-[○] Try to make EasyStackView's behavior quite the same with Web flex layout.
+☐ Try to make EasyStackView's behavior quite the same with Web flex layout.
