@@ -141,6 +141,7 @@
 		2C65A7B024C5A42A00D98D5E /* Sample2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample2ViewController.swift; sourceTree = "<group>"; };
 		2C65A7B524C6771500D98D5E /* ESVRecycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVRecycleView.h; sourceTree = "<group>"; };
 		2C65A7B624C6771500D98D5E /* ESVRecycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVRecycleView.m; sourceTree = "<group>"; };
+		2C7BFE7025144A12007195C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2C84BC022446F103000FBB20 /* ESVStackPlaceHolder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackPlaceHolder.h; sourceTree = "<group>"; };
 		2C84BC032446F103000FBB20 /* ESVStackPlaceHolder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVStackPlaceHolder.m; sourceTree = "<group>"; };
 		2C84BC062446F1E9000FBB20 /* ESVStackItemType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackItemType.h; sourceTree = "<group>"; };
@@ -203,6 +204,7 @@
 		2C49EA0724358DB40026233D = {
 			isa = PBXGroup;
 			children = (
+				2C7BFE7025144A12007195C9 /* README.md */,
 				2C002E03245602A300364C88 /* EasyStackView.podspec */,
 				2C49EA1324358DB40026233D /* EasyStackView */,
 				2C49EA1E24358DB40026233D /* EasyStackViewTests */,
