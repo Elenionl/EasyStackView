@@ -36,6 +36,7 @@
 		2C65A7B124C5A42A00D98D5E /* Sample2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C65A7B024C5A42A00D98D5E /* Sample2ViewController.swift */; };
 		2C65A7B724C6771500D98D5E /* ESVRecycleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C65A7B524C6771500D98D5E /* ESVRecycleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C65A7B824C6771500D98D5E /* ESVRecycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65A7B624C6771500D98D5E /* ESVRecycleView.m */; };
+		2C7BFE8D2514840D007195C9 /* Sample4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BFE8C2514840D007195C9 /* Sample4ViewController.swift */; };
 		2C84BC042446F103000FBB20 /* ESVStackPlaceHolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C84BC022446F103000FBB20 /* ESVStackPlaceHolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C84BC052446F103000FBB20 /* ESVStackPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C84BC032446F103000FBB20 /* ESVStackPlaceHolder.m */; };
 		2C84BC082446F1E9000FBB20 /* ESVStackItemType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C84BC062446F1E9000FBB20 /* ESVStackItemType.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -142,6 +143,7 @@
 		2C65A7B524C6771500D98D5E /* ESVRecycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVRecycleView.h; sourceTree = "<group>"; };
 		2C65A7B624C6771500D98D5E /* ESVRecycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVRecycleView.m; sourceTree = "<group>"; };
 		2C7BFE7025144A12007195C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2C7BFE8C2514840D007195C9 /* Sample4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample4ViewController.swift; sourceTree = "<group>"; };
 		2C84BC022446F103000FBB20 /* ESVStackPlaceHolder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackPlaceHolder.h; sourceTree = "<group>"; };
 		2C84BC032446F103000FBB20 /* ESVStackPlaceHolder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVStackPlaceHolder.m; sourceTree = "<group>"; };
 		2C84BC062446F1E9000FBB20 /* ESVStackItemType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVStackItemType.h; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				2C65A7AE24C58F4600D98D5E /* Sample1ViewController.swift */,
 				2C65A7B024C5A42A00D98D5E /* Sample2ViewController.swift */,
 				2C61367B24D5CF4D00289776 /* Sample3ViewController.swift */,
+				2C7BFE8C2514840D007195C9 /* Sample4ViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C65A7AF24C58F4600D98D5E /* Sample1ViewController.swift in Sources */,
+				2C7BFE8D2514840D007195C9 /* Sample4ViewController.swift in Sources */,
 				2C65A7B124C5A42A00D98D5E /* Sample2ViewController.swift in Sources */,
 				2C49EA3624358DC90026233D /* ViewController.swift in Sources */,
 				2C49EA3224358DC90026233D /* AppDelegate.swift in Sources */,

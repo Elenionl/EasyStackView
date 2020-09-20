@@ -21,65 +21,169 @@ Use this firm to find `podfile` script for your project.
 ```
 
 ## How to use
-![Demo1](https://raw.githubusercontent.com/Elenionl/EasyStackView/master/readme_image/WX20200918-003155%402x.png)
-![Demo2](https://github.com/Elenionl/EasyStackView/blob/master/readme_image/WX20200918-003244@2x.png?raw=true)
-![Demo1](https://github.com/Elenionl/EasyStackView/blob/master/readme_image/WX20200918-003619@2x.png?raw=true)
 
 
-There are three kinds of flex container right now:
+There are four kinds of flex container right now:
 
-`ESVStackView`
+`ESVStackView` -> `UIView`
 
-`ESVStackPlaceHolder`
-
-`ESVScrollView`
-
-`ESVRecycleView`
-
-`ESVStackView` is just a simple view will layout its arranged items with flex layout.
-
-`ESVStackPlaceHolder` works just the same as `ESVStackView` but it is not a subclass of `UIView`. It works as an abstract container to laytou its arranged items. You can use it to arrange complex layout without creating too much unnecessary view hierarchy.
+`ESVStackPlaceHolder` -> `UIView` (When using flexbox layout, we create some `<div>` purelly for layout reference. To avoid creating too much useless  `UIView` object, use `ESVStackPlaceHolder` instead of `ESVStackView`. `ESVStackPlaceHolder` is much less expensive compared with `ESVStackView`.)
 
 *Attention:* `ESVStackPlaceHolder` instance should not be the root of an flex layout tree.
 
-`ESVScrollView` is a Scroll View with flex layout inside.
+`ESVScrollView` -> `UIScrollView`
 
-`ESVRecycleView` is a Scroll View with flex layout inside as long as **item reuse feature**.
+`ESVRecycleView` -> `UITableView` or `UICollectionView`
+
+### Sample
+
+[Alert](https://github.com/Elenionl/EasyStackView/blob/master/readme_image/WX20200920-220607@2x.png?raw=true)
+
+To build UI as above, there are only few steps.
+
+1. Firstly, create a container for the whole alertView. Each element inside is rendered vertically, and stretched as width as possible.
 
 ``` Swift
-let item = ESVStackView()
-item.flexDirection = .row
-item.alignItems = .flexStart
-item.justifyContent = .flexStart
-item.spaceBetween = 10
-let container = ESVScrollView(frame: CGRect(x: 0, y: 0, width: 300, height:700))
-container.flexDirection = .row
-item.addArrangedItem(container)
-item.manageConfig(of: container) { (config) in
-    config?.growth = true
-}
-item.backgroundColor = UIColor.red
-let view1 = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
-view1.backgroundColor = UIColor.blue
-container.addArrangedItem(view1)
-container.manageConfig(of: view1) { (config) in
-    config?.margin = UIEdgeInsets(top: 100, left: 20, bottom: 20, right: 20)
-    config?.shrink = true
-    config?.growth = true
-}
-let view2 = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
-view2.backgroundColor = UIColor.green
-container.addArrangedItem(view2)
-container.manageConfig(of: view2) { (config) in
-    config?.shrink = true
-}
-let view3 = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
-view3.backgroundColor = UIColor.purple
-container.addArrangedItem(view3)
-let view4 = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 400))
-view4.backgroundColor = UIColor.green
-item.addArrangedItem(view4)
+let container: ESVStackView = createContainer()
+container.flexDirection = .column
+container.alignItems = .stretch
 ```
+
+2. Add title.
+
+``` Swift
+let title: UILabel = createTitle()
+container.addArrangedItem(title)
+```
+
+3. Add content and set margin for content.
+
+``` Swift
+let content: UITextView = createContent()
+container.addArrangedItem(content)
+container.manageConfig(of: content) { (config) in
+    config?.margin = .init(top: 10, left: 10, bottom: 10, right: 10)
+    config?.growth = true
+}
+```
+
+4. Create a scrollable container to hold four icons. Hide the horizontal scroll indicator. Eelements layout horizontal.
+
+``` Swift
+let iconHolder: ESVScrollView = createIconHolder()
+iconHolder.showsHorizontalScrollIndicator = false
+container.addArrangedItem(iconHolder)
+iconHolder.flexDirection = .row
+container.manageConfig(of: iconHolder) { (config) in
+    config?.margin = .init(top: 10, left: 10, bottom: 10, right: 10)
+}
+```
+
+5. Create four items and add them to the scrollable container.
+
+``` Swift
+for i in 0...4 {
+    let icon: UIView = createIcon()
+    if i % 3 == 0 {
+        icon.backgroundColor = UIColor.red
+    } else {
+        icon.backgroundColor = UIColor.white
+    }
+    iconHolder.addArrangedItem(icon)
+    if i == 4 {
+        iconHolder.manageConfig(of: UInt(i)) { (config) in
+            config?.margin = .init(top: 0, left: 5, bottom: 0, right: 5)
+        }
+    } else {
+        iconHolder.manageConfig(of: UInt(i)) { (config) in
+            config?.margin = .init(top: 0, left: 5, bottom: 0, right: 0)
+        }
+    }
+}
+```
+
+6. Create another scrollable container to hold ten icons. In case there are too much icons inside, we'd prefer using recycable container.
+
+``` Swift
+let recycleIconHolder: ESVRecycleView = createRecycleIconHolder()
+recycleIconHolder.showsHorizontalScrollIndicator = false
+container.addArrangedItem(recycleIconHolder)
+recycleIconHolder.flexDirection = .row
+container.manageConfig(of: recycleIconHolder) { (config) in
+    config?.margin = .init(top: 10, left: 10, bottom: 10, right: 10)
+}
+```
+
+7. Define a subclass of `UIView` which works as recyclable element in display.
+
+``` Swift
+class RecycleIcon: UIView, ESVRecycleCellType {
+    func prepareForReuse() {
+        
+    }
+    
+    func config(with model: ESVRecyclableModelType, index: UInt) {
+        self.layer.cornerRadius = 6
+        self.backgroundColor = index % 3 == 0 ? UIColor.white : UIColor.red
+    }
+}
+```
+
+8. Register `RecycleIcon` generator with key `"RecycleIcon"`.
+
+``` Swift
+recycleIconHolder.registerGenerator({ () -> UIView & ESVRecycleCellType in
+    return RecycleIcon()
+}, forIdentifier: "RecycleIcon")
+```
+
+9. Add ten model objects to the container.
+
+``` Swift
+for i in 0...10 {
+    let model: ESVRecyclableModelType = ESVRecyclableModel()
+    model.frame = .init(x: 0, y: 0, width: 50, height: 50)
+    model.identifier = "RecycleIcon"
+    recycleIconHolder.addArrangedItem(model)
+    if i == 10 {
+        recycleIconHolder.manageConfig(of: UInt(i)) { (config) in
+            config?.margin = .init(top: 0, left: 5, bottom: 0, right: 5)
+        }
+    } else {
+        recycleIconHolder.manageConfig(of: UInt(i)) { (config) in
+            config?.margin = .init(top: 0, left: 5, bottom: 0, right: 0)
+        }
+    }
+}
+```
+
+10. Add a container for buttons. It only works as a render reference and has not display. So using `ESVStackPlaceHolder` is a cheap choice.
+
+``` Swift
+let buttonContainer: ESVStackPlaceHolder = createButtonContainer()
+container.addArrangedItem(buttonContainer)
+buttonContainer.flexDirection = .row
+buttonContainer.alignItems = .stretch
+```
+
+11. Add two buttons to the button container. Two buttons are equal in size and should stretch to occupy all space.
+
+``` Swift
+let confirmButton = createConfirmButton()
+buttonContainer.addArrangedItem(confirmButton)
+buttonContainer.manageConfig(of: confirmButton) { (config) in
+    config?.growth = true
+    config?.margin = .init(top: 5, left: 5, bottom: 5, right: 5)
+}
+let cancelButton = createCancelButton()
+buttonContainer.addArrangedItem(cancelButton)
+buttonContainer.manageConfig(of: cancelButton) { (config) in
+    config?.growth = true
+    config?.margin = .init(top: 5, left: 5, bottom: 5, right: 5)
+}
+```
+
+This sample is written in `./Demo/Sample4ViewController.swift` in this repository. You can run the `Demo` target with Xcode to check this out.
 
 ## Features
 
@@ -237,8 +341,9 @@ Each arrange item is associated with its `ESVStackItemConfig` config object. You
 
 ## TODO
 
-☑︎ Scroll view with flex layout.
+[Finish]    Scroll view with flex layout.
 
-☑︎ Scroll view with view reusable, in order to replace `UITableView`.
+[Finish]    Scroll view with view reusable, in order to replace `UITableView`.
 
-☐ Try to make EasyStackView's behavior quite the same with Web flex layout.
+[Todo]      Try to make EasyStackView's behavior quite the same with Web flex layout.
+
