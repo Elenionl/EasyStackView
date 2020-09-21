@@ -37,7 +37,7 @@ There are four kinds of flex container right now:
 
 ### Sample
 
-[Alert](https://github.com/Elenionl/EasyStackView/blob/master/readme_image/WX20200920-220607@2x.png?raw=true)
+![Alert](https://github.com/Elenionl/EasyStackView/blob/master/readme_image/WX20200920-220607@2x.png?raw=true)
 
 To build UI as above, there are only few steps.
 
