@@ -42,8 +42,10 @@
     switch (flexConfig.flexDirection) {
         case ESVDirectionRow:
             result = CGSizeMake(total, size.height);
+            break;
         case ESVDirectionColumn:
             result = CGSizeMake(size.width, total);
+            break;
     }
     CGFloat axisOffset;
     CGFloat space = transformedSize.width - total;

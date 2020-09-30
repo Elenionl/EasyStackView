@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C08C6AF252330CA00316CC0 /* Sample5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C08C6AE252330CA00316CC0 /* Sample5ViewController.swift */; };
 		2C49EA1B24358DB40026233D /* EasyStackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C49EA1124358DB40026233D /* EasyStackView.framework */; };
 		2C49EA2024358DB40026233D /* EasyStackViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C49EA1F24358DB40026233D /* EasyStackViewTests.m */; };
 		2C49EA2224358DB40026233D /* EasyStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C49EA1424358DB40026233D /* EasyStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		2C002E03245602A300364C88 /* EasyStackView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = EasyStackView.podspec; sourceTree = "<group>"; };
+		2C08C6AE252330CA00316CC0 /* Sample5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample5ViewController.swift; sourceTree = "<group>"; };
 		2C49EA1124358DB40026233D /* EasyStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C49EA1424358DB40026233D /* EasyStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyStackView.h; sourceTree = "<group>"; };
 		2C49EA1524358DB40026233D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				2C65A7B024C5A42A00D98D5E /* Sample2ViewController.swift */,
 				2C61367B24D5CF4D00289776 /* Sample3ViewController.swift */,
 				2C7BFE8C2514840D007195C9 /* Sample4ViewController.swift */,
+				2C08C6AE252330CA00316CC0 /* Sample5ViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				2C7BFE8D2514840D007195C9 /* Sample4ViewController.swift in Sources */,
 				2C65A7B124C5A42A00D98D5E /* Sample2ViewController.swift in Sources */,
 				2C49EA3624358DC90026233D /* ViewController.swift in Sources */,
+				2C08C6AF252330CA00316CC0 /* Sample5ViewController.swift in Sources */,
 				2C49EA3224358DC90026233D /* AppDelegate.swift in Sources */,
 				2C61367C24D5CF4D00289776 /* Sample3ViewController.swift in Sources */,
 			);
