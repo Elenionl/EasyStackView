@@ -169,13 +169,13 @@ buttonContainer.alignItems = .stretch
 11. Add two buttons to the button container. Two buttons are equal in size and should stretch to occupy all space.
 
 ``` Swift
-let confirmButton = createConfirmButton()
+let confirmButton: UIButton = createConfirmButton()
 buttonContainer.addArrangedItem(confirmButton)
 buttonContainer.manageConfig(of: confirmButton) { (config) in
     config?.growth = true
     config?.margin = .init(top: 5, left: 5, bottom: 5, right: 5)
 }
-let cancelButton = createCancelButton()
+let cancelButton: UIButton = createCancelButton()
 buttonContainer.addArrangedItem(cancelButton)
 buttonContainer.manageConfig(of: cancelButton) { (config) in
     config?.growth = true
