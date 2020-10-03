@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// This should not be called mannually.
 - (void)applyItemFrame;
 
-/// The preffered size of this view, which can properly hold all its arranged items.
+/// The prefered size of this view, which can properly hold all its arranged items.
 @property (readonly) CGSize preferedSize;
 
 @end

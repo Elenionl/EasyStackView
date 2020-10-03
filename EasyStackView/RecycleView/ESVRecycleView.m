@@ -123,10 +123,9 @@
 }
 
 - (void)addArrangedItem:(NSObject<ESVRecyclableModelType> *)item {
-    // View should be nonnull
-    NSParameterAssert(item);
-    NSAssert(![self.privateArrangedItems containsObject:item], @"View is already in arranged view. Please remove first.");
-    // If array contains this view, ignore.
+    if (!item) {
+        return;
+    }
     if ([self.privateArrangedItems containsObject:item]) {
         return;
     }
@@ -142,6 +141,9 @@
     if (!item) {
         return;
     }
+    if (![self.privateArrangedItems containsObject:item]) {
+        return;
+    }
     NSUInteger index = [self.privateArrangedItems indexOfObject:item];
     [self.privateArrangedItems removeObjectAtIndex:index];
     [item esv_removeFromSuperitem];
@@ -150,8 +152,9 @@
 }
 
 - (void)insertArrangedItem:(ESVRecyclableModel *)item atIndex:(NSUInteger)index {
-    NSParameterAssert(item);
-    NSAssert(![self.privateArrangedItems containsObject:item], @"View is already in arranged view. Please remove first.");
+    if (!item) {
+        return;
+    }
     if ([self.privateArrangedItems containsObject:item]) {
         return;
     }
@@ -179,8 +182,6 @@
 #pragma mark - ESVConfigManageType
 
 - (nullable ESVStackItemConfig *)configOfIndex:(NSUInteger)index {
-    NSParameterAssert(index < self.arrangedConfigs.count);
-    NSParameterAssert(index >= 0);
     if (index < self.arrangedConfigs.count && index >= 0) {
         return self.arrangedConfigs[index];
     } else {
@@ -189,7 +190,9 @@
 }
 
 - (ESVStackItemConfig *)configOfItem:(ESVRecyclableModel *)item {
-    NSCParameterAssert(item);
+    if (!item) {
+        return nil;
+    }
     NSUInteger index = [self.privateArrangedItems indexOfObject:item];
     return [self configOfIndex:index];
 }
@@ -203,7 +206,9 @@
 }
 
 - (void)manageConfigOfItem:(ESVRecyclableModel *)item configAction:(void (^)(ESVStackItemConfig * _Nullable))configAction {
-    NSCParameterAssert(item);
+    if (!item) {
+        return;
+    }
     NSUInteger index = [self.privateArrangedItems indexOfObject:item];
     [self manageConfigOfIndex:index configAction:configAction];
 }
