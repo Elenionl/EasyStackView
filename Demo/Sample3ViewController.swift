@@ -18,7 +18,7 @@ class Display: UIView, ESVRecycleCellType {
     
     func config(with model: ESVRecyclableModelType, index: UInt) {
         self.model = model as? ESVRecyclableModel
-        backgroundColor = (index % 2) == 0 ? UIColor.red : UIColor.blue
+        backgroundColor = (index % 2) == 0 ? UIColor.white : UIColor.black
     }
 }
 
@@ -27,51 +27,29 @@ class Sample3ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let recycle = ESVRecycleView(frame: self.view.bounds)
-        recycle.backgroundColor = UIColor.green
+        recycle.backgroundColor = UIColor.lightGray
         recycle.registerGenerator({ () -> UIView & ESVRecycleCellType in
             return Display()
         }, forIdentifier: "display")
-        recycle.flexDirection = .row
+        recycle.flexDirection = .column
         recycle.alignItems = .center
 //        recycle.justifyContent = .flexStart
         self.view.addSubview(recycle)
         recycle.addArrangedItems(models)
         models.forEach { (model) in
             recycle.manageConfig(of: model) { (config) in
-                config?.margin = UIEdgeInsets(top: 150, left: 5, bottom: 5, right: 0)
+                config?.margin = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
             }
         }
     }
     
     let models : [ESVRecyclableModel] = {
-        let result: [ESVRecyclableModel] = [
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-            ESVRecyclableModel(),
-        ]
-        result.forEach { (model) in
-            model.frame = CGRect(x: 0, y: 0, width: 10 + Int(arc4random()) % 20, height: 120 + Int(arc4random()) % 240)
+        var result: [ESVRecyclableModel] = []
+        for _ in 0..<1000 {
+            let model = ESVRecyclableModel()
+            model.frame = CGRect(x: 0, y: 0, width: 50 + Int(arc4random()) % 240, height: 20 + Int(arc4random()) % 40)
             model.identifier = "display"
+            result.append(model)
         }
         return result
     }()
