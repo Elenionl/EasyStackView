@@ -112,7 +112,7 @@
     }
 }
 
-#pragma mark - ESVViewManageType
+#pragma mark - ESVItemManageType
 
 @synthesize superItem = _superItem;
 
@@ -229,22 +229,21 @@
         cacheFrame.origin.x += self.frame.origin.x;
         cacheFrame.origin.y += self.frame.origin.y;
         config.item.frame = cacheFrame;
-        if ([config.item conformsToProtocol:@protocol(ESVRefreshManageType)]) {
-            NSObject<ESVRefreshManageType> *item = (NSObject<ESVRefreshManageType> *)config.item;
-            [item applyItemFrame];
-        }
     }
 }
 
 - (void)render {
     for (NSObject<ESVStackItemType> * item in self.privateArrangedItems) {
-        if ([item conformsToProtocol:@protocol(ESVRefreshManageType)]) {
+        BOOL isHolder = ![item isKindOfClass:UIView.class];
+        BOOL isRefreshable = [item conformsToProtocol:@protocol(ESVRefreshManageType)];
+        if (isHolder && isRefreshable) {
             [((id<ESVRefreshManageType>) item) render];
         }
     }
     if (self.dirty) {
         self.preferredSizeCache = [ESVCalculator layoutWithSize:self.bounds.size flexConfig:self arrangedConfigs:self.arrangedConfigs];
         self.dirty = false;
+        [self applyItemFrame];
     }
 }
 

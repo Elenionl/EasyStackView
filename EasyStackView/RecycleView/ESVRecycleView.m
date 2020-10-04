@@ -95,7 +95,7 @@
     }
 }
 
-#pragma mark - ESVViewManageType
+#pragma mark - ESVItemManageType
 
 @synthesize superItem = _superItem;
 
@@ -231,13 +231,17 @@
 }
 
 - (void)render {
-    for (UIView *view in self.managedViews) {
-        if (![self.subviews containsObject:view]) {
-            [self addSubview:view];
-        }
-    }
+    __auto_type managedViews = self.managedViews;
+    NSMutableSet<UIView *> *managedViewSet = [NSMutableSet setWithArray:managedViews];
+    NSSet<UIView *> *subviewSet = [NSSet setWithArray:self.subviews];
+    [managedViewSet minusSet:subviewSet];
+    [managedViewSet enumerateObjectsUsingBlock:^(UIView * _Nonnull obj, BOOL * _Nonnull stop) {
+        [self addSubview:obj];
+    }];
     for (NSObject<ESVStackItemType> * item in self.privateArrangedItems) {
-        if ([item conformsToProtocol:@protocol(ESVRefreshManageType)]) {
+        BOOL isHolder = ![item isKindOfClass:UIView.class];
+        BOOL isRefreshable = [item conformsToProtocol:@protocol(ESVRefreshManageType)];
+        if (isHolder && isRefreshable) {
             [((id<ESVRefreshManageType>) item) render];
         }
     }
@@ -254,6 +258,7 @@
         CGSize result = CGSizeMake(MAX(current.width, self.preferredSizeCache.width), MAX(current.height, self.preferredSizeCache.height));
         self.contentSize = result;
         self.dirty = false;
+        [self applyItemFrame];
     }
 }
 
@@ -265,17 +270,12 @@
 - (void)applyItemFrame {
     for (ESVStackItemConfig *config in self.arrangedConfigs) {
         config.item.frame = config.cacheFrame;
-        if ([config.item conformsToProtocol:@protocol(ESVRefreshManageType)]) {
-            NSObject<ESVRefreshManageType> *item = (NSObject<ESVRefreshManageType> *)config.item;
-            [item applyItemFrame];
-        }
     }
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self render];
-    [self applyItemFrame];
     [self updateHotDisplay];
 }
 
