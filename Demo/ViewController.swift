@@ -13,54 +13,72 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(stackView)
-        stackView.frame = view.bounds
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
-            self.stackView.alignItems = .center
+        view.addSubview(scrollView)
+        scrollView.frame = view.bounds
+        let button1 = Button(frame: .init(x: 0, y: 0, width: 200, height: 100))
+        button1.updateConfig(name: "Sample1") { [weak self] in
+            self?.navigationController?.pushViewController(Sample1ViewController(), animated: true)
         }
-        stackView.addTarget(self, action: #selector(didTapItem), for: .touchUpInside)
+        scrollView.addArrangedItem(button1)
+        let button2 = Button(frame: .init(x: 0, y: 0, width: 200, height: 100))
+        button2.updateConfig(name: "Sample2") { [weak self] in
+            self?.navigationController?.pushViewController(Sample2ViewController(), animated: true)
+        }
+        scrollView.addArrangedItem(button2)
+        let button3 = Button(frame: .init(x: 0, y: 0, width: 200, height: 100))
+        button3.updateConfig(name: "Sample3") { [weak self] in
+            self?.navigationController?.pushViewController(Sample3ViewController(), animated: true)
+        }
+        scrollView.addArrangedItem(button3)
+        let button4 = Button(frame: .init(x: 0, y: 0, width: 200, height: 100))
+        button4.updateConfig(name: "Sample4") { [weak self] in
+            self?.navigationController?.pushViewController(Sample4ViewController(), animated: true)
+        }
+        scrollView.addArrangedItem(button4)
+        let button5 = Button(frame: .init(x: 0, y: 0, width: 200, height: 100))
+        button5.updateConfig(name: "Sample5") { [weak self] in
+            self?.navigationController?.pushViewController(Sample5ViewController(), animated: true)
+        }
+        scrollView.addArrangedItem(button5)
     }
     
-    @objc func didTapItem() {
-        print("item")
-    }
-    
-    lazy var stackView: ESVStackControl = {
-        let item = ESVStackControl()
-        item.flexDirection = .row
-        item.alignItems = .flexStart
+    lazy var scrollView: ESVScrollView = {
+        let item = ESVScrollView()
+        item.flexDirection = .column
+        item.alignItems = .stretch
         item.justifyContent = .flexStart
-        item.spaceBetween = 10
-        let container = ESVScrollView(frame: CGRect(x: 0, y: 0, width: 300, height: 700))
-        container.backgroundColor = UIColor.yellow
-        container.flexDirection = .row
-        item.addArrangedItem(container)
-        item.manageConfig(of: container) { (config) in
-            config?.growth = true
-        }
-        item.backgroundColor = UIColor.red
-        let view1 = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
-        view1.backgroundColor = UIColor.blue
-        container.addArrangedItem(view1)
-        container.manageConfig(of: view1) { (config) in
-            config?.margin = UIEdgeInsets(top: 100, left: 20, bottom: 20, right: 20)
-            config?.shrink = true
-            config?.growth = true
-        }
-        let view2 = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
-        view2.backgroundColor = UIColor.green
-        container.addArrangedItem(view2)
-        container.manageConfig(of: view2) { (config) in
-            config?.shrink = true
-        }
-        let view3 = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
-        view3.backgroundColor = UIColor.purple
-        container.addArrangedItem(view3)
-        let view4 = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 400))
-        view4.backgroundColor = UIColor.green
-        item.addArrangedItem(view4)
         return item
     }()
+}
 
+class Button: ESVStackControl {
+    lazy var label: UILabel = {
+        let item = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        item.textColor = UIColor.black
+        item.textAlignment = .center
+        return item
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .white
+        addArrangedItem(label)
+        addTarget(self, action: #selector(didTapItem), for: .touchUpInside)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateConfig(name: String, action: @escaping () -> Void) {
+        label.text = name
+        self.action = action
+    }
+    
+    var action: (() -> Void)?
+    
+    @objc func didTapItem() {
+        action?()
+    }
 }
 

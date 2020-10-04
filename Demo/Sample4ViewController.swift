@@ -28,7 +28,7 @@ class Sample4ViewController: UIViewController {
         let content: UITextView = createContent()
         container.addArrangedItem(content)
         container.manageConfig(of: content) { (config) in
-            config?.margin = .init(top: 10, left: 10, bottom: 10, right: 10)
+            config?.margin = .init(top: 0, left: 10, bottom: 10, right: 10)
             config?.growth = true
         }
         let iconHolder: ESVScrollView = createIconHolder()
@@ -112,8 +112,9 @@ class Sample4ViewController: UIViewController {
     }
     
     func createTitle() -> UILabel {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
         label.textAlignment = .center
+        label.textColor = UIColor.darkGray
         label.font = .boldSystemFont(ofSize: 20)
         label.text = "Title"
         return label
@@ -122,6 +123,8 @@ class Sample4ViewController: UIViewController {
     func createContent() -> UITextView {
         let textView = UITextView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         textView.isEditable = false;
+        textView.backgroundColor = UIColor.clear
+        textView.textColor = .lightGray
         textView.textAlignment = .center
         textView.font = .systemFont(ofSize: 12)
         textView.text = "This is content of all stuff. Good to see you today."

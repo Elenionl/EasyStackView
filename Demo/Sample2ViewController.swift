@@ -13,6 +13,7 @@ class Sample2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.white
         let container = ESVScrollView(frame: self.view.bounds)
         container.alignItems = .stretch
         view.addSubview(container)
@@ -32,9 +33,9 @@ class Sample2ViewController: UIViewController {
         item.flexDirection = .row
         item.alignItems = .center
         item.justifyContent = .flexStart
-        item.backgroundColor = UIColor.green
+        item.backgroundColor = UIColor.lightGray
         let image = UIImageView(frame: .init(x: 0, y: 0, width: 50, height: 50))
-        image.backgroundColor = UIColor.yellow
+        image.backgroundColor = UIColor.white
         image.layer.cornerRadius = 5
         image.clipsToBounds = true
         item.addArrangedItem(image)
@@ -53,16 +54,16 @@ class Sample2ViewController: UIViewController {
         }
         item.alignItems = .stretch
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 25))
-        titleLabel.backgroundColor = UIColor.blue
+        titleLabel.backgroundColor = UIColor.white
         titleLabel.text = "123"
-        titleLabel.textColor = UIColor.white
+        titleLabel.textColor = UIColor.darkGray
         container.addArrangedItem(titleLabel)
         let subTitleContainer = ESVStackPlaceHolder(frame: .init(x: 0, y: 0, width: 150, height: 20))
         container.addArrangedItem(subTitleContainer)
         subTitleContainer.justifyContent = .flexStart
         subTitleContainer.flexDirection = .row
         let tagIcon = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        tagIcon.backgroundColor = UIColor.blue
+        tagIcon.backgroundColor = UIColor.white
         subTitleContainer.addArrangedItem(tagIcon)
         let empty = ESVStackPlaceHolder(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         subTitleContainer.addArrangedItem(empty)
@@ -71,7 +72,7 @@ class Sample2ViewController: UIViewController {
             config?.shrink = true
         }
         let rightLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 45, height: 20))
-        rightLabel.backgroundColor = UIColor.blue
+        rightLabel.backgroundColor = UIColor.white
         subTitleContainer.addArrangedItem(rightLabel)
         return item
     }
