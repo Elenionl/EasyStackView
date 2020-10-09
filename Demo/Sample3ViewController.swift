@@ -27,6 +27,8 @@ class Sample3ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let recycle = ESVRecycleView(frame: self.view.bounds)
+        recycle.spaceBetween = 10
+        recycle.padding = .init(top: 10, left: 10, bottom: 10, right: 10)
         recycle.backgroundColor = UIColor.lightGray
         recycle.registerGenerator({ () -> UIView & ESVRecycleCellType in
             return Display()
@@ -36,11 +38,6 @@ class Sample3ViewController: UIViewController {
 //        recycle.justifyContent = .flexStart
         self.view.addSubview(recycle)
         recycle.addArrangedItems(models)
-        models.forEach { (model) in
-            recycle.manageConfig(of: model) { (config) in
-                config?.margin = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-            }
-        }
     }
     
     let models : [ESVRecyclableModel] = {

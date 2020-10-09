@@ -16,15 +16,14 @@ class Sample2ViewController: UIViewController {
         view.backgroundColor = UIColor.white
         let container = ESVScrollView(frame: self.view.bounds)
         container.alignItems = .stretch
+        container.padding = .init(top: 15, left: 15, bottom: 15, right: 15)
+        container.spaceBetween = 10
         view.addSubview(container)
         for _ in 0..<30 {
             let cell = createCell()
             cell.layer.cornerRadius = 5
             cell.clipsToBounds = true
             container.addArrangedItem(cell)
-            container.manageConfig(of: cell) { (config) in
-                config?.margin = .init(top: 10, left: 10, bottom: 10, right: 10)
-            }
         }
     }
     

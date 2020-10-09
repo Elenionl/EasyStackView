@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Minium space between items.
 @property (nonatomic, assign) CGFloat spaceBetween;
 
+/// Inner inset between container and its elements
+@property (nonatomic, assign) UIEdgeInsets padding;
+
 
 @end
 

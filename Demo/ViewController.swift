@@ -45,8 +45,11 @@ class ViewController: UIViewController {
     lazy var scrollView: ESVScrollView = {
         let item = ESVScrollView()
         item.flexDirection = .column
-        item.alignItems = .stretch
+        item.alignItems = .center
         item.justifyContent = .flexStart
+        item.backgroundColor = UIColor.red;
+        item.padding = .init(top: 50, left: 50, bottom: 50, right: 50)
+        item.spaceBetween = 50
         return item
     }()
 }

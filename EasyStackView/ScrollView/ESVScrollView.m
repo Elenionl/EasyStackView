@@ -36,6 +36,7 @@
         _preferredSizeCache = CGSizeZero;
         _arrangedConfigs = NSMutableArray.new;
         _privateArrangedItems = NSMutableArray.new;
+        _padding = UIEdgeInsetsZero;
     }
     return self;
 }
@@ -56,6 +57,8 @@
 @synthesize justifyContent = _justifyContent;
 
 @synthesize spaceBetween = _spaceBetween;
+
+@synthesize padding = _padding;
 
 - (void)setAlignItems:(ESVAlign)alignItems {
     if (alignItems != _alignItems) {

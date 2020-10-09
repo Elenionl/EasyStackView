@@ -9,7 +9,38 @@
 #import "ESVCalculator.h"
 #import "ESVStackItemConfig.h"
 #import "ESVFrameUtil.h"
-#import "ESVStackItemConfig+Axis.h"
+
+CGFloat headOffsetEdgeInsetDirection(UIEdgeInsets edgeInset, ESVDirection direction) {
+    if (direction == UILayoutConstraintAxisHorizontal) {
+        return edgeInset.left;
+    } else {
+        return edgeInset.top;
+    }
+}
+
+CGFloat tailOffsetEdgeInsetDirection(UIEdgeInsets edgeInset, ESVDirection direction) {
+    if (direction == UILayoutConstraintAxisHorizontal) {
+        return edgeInset.right;
+    } else {
+        return edgeInset.bottom;
+    }
+}
+
+CGFloat alignStartOffsetEdgeInsetDirection(UIEdgeInsets edgeInset, ESVDirection direction) {
+    if (direction == UILayoutConstraintAxisHorizontal) {
+        return edgeInset.top;
+    } else {
+        return edgeInset.left;
+    }
+}
+
+CGFloat alignEndOffsetEdgeInsetDirection(UIEdgeInsets edgeInset, ESVDirection direction) {
+    if (direction == UILayoutConstraintAxisHorizontal) {
+        return edgeInset.bottom;
+    } else {
+        return edgeInset.right;
+    }
+}
 
 @interface ESVCalculator ()
 
@@ -20,13 +51,15 @@
 + (CGSize)layoutWithSize:(CGSize)size flexConfig:(nonnull id<ESVFlexManageType>)flexConfig arrangedConfigs:(nonnull NSArray<ESVStackItemConfig *> *)arrangedConfigs {
     CGSize transformedSize = [ESVFrameUtil transformedWithDirection:flexConfig.flexDirection ofSize:size];
     NSMutableArray<NSNumber *> *margins = [[NSMutableArray alloc] initWithCapacity:arrangedConfigs.count + 1];
-    CGFloat previousTailMargin = 0;
+    CGFloat head = headOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection);
+    CGFloat tail = tailOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection);
+    CGFloat previousTailMargin = head;
     CGFloat total = 0;
     for (int i = 0; i < arrangedConfigs.count; i++) {
         ESVStackItemConfig *config = arrangedConfigs[i];
         CGSize transformedSize = [ESVFrameUtil transformedWithDirection:flexConfig.flexDirection ofSize:config.originSize];
         config.cacheTransformedFrame = CGRectMake(0, 0, transformedSize.width, transformedSize.height);
-        CGFloat headMargin = [config headMarginOfDirection:flexConfig.flexDirection];
+        CGFloat headMargin = headOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection);
         CGFloat currentHead = MAX(previousTailMargin, headMargin);
         if (i != 0) {
             currentHead = MAX(currentHead, flexConfig.spaceBetween);
@@ -34,10 +67,11 @@
         [margins addObject:@(currentHead)];
         total += currentHead;
         total += transformedSize.width;
-        previousTailMargin = [config tailMarginOfDirection:flexConfig.flexDirection];
+        previousTailMargin = tailOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection);
     }
-    [margins addObject:@(previousTailMargin)];
-    total += previousTailMargin;
+    CGFloat lastMargin = MAX(previousTailMargin, tail);
+    [margins addObject:@(lastMargin)];
+    total += lastMargin;
     CGSize result;
     switch (flexConfig.flexDirection) {
         case ESVDirectionRow:
@@ -87,19 +121,23 @@
         } else {
             align = flexConfig.alignItems;
         }
+        UIEdgeInsets margin = config.margin;
+        UIEdgeInsets padding = flexConfig.padding;
+        CGFloat start = MAX(alignStartOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection), alignStartOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection));
+        CGFloat end = MAX(alignEndOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection), alignEndOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection));
         switch (align) {
             case ESVAlignFlexStart:
-                y = [config alignStartMarginOfDirection:flexConfig.flexDirection];
+                y = start;
                 break;
             case ESVAlignFlexEnd:
-                y = transformedSize.height - itemTransformedRect.size.height - [config alignEndMarginOfDirection:flexConfig.flexDirection];
+                y = transformedSize.height - itemTransformedRect.size.height - end;
                 break;
             case ESVAlignCenter:
                 y = (transformedSize.height - itemTransformedRect.size.height) / 2;
                 break;
             case ESVAlignStretch:
-                y = [config alignStartMarginOfDirection:flexConfig.flexDirection];
-                height = transformedSize.height - [config alignStartMarginOfDirection:flexConfig.flexDirection] - [config alignEndMarginOfDirection:flexConfig.flexDirection];
+                y = start;
+                height = transformedSize.height - start - end;
                 break;
         }
         CGRect transformedFrame = CGRectMake(total, y, itemTransformedRect.size.width, height);
@@ -113,13 +151,15 @@
 + (CGSize)scrollViewLayoutWithSize:(CGSize)size flexConfig:(id<ESVFlexManageType>)flexConfig arrangedConfigs:(NSArray <ESVStackItemConfig *>*)arrangedConfigs {
     CGSize transformedSize = [ESVFrameUtil transformedWithDirection:flexConfig.flexDirection ofSize:size];
     NSMutableArray<NSNumber *> *margins = [[NSMutableArray alloc] initWithCapacity:arrangedConfigs.count + 1];
-    CGFloat previousTailMargin = 0;
+    CGFloat head = headOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection);
+    CGFloat tail = tailOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection);
+    CGFloat previousTailMargin = head;
     CGFloat total = 0;
     for (int i = 0; i < arrangedConfigs.count; i++) {
         ESVStackItemConfig *config = arrangedConfigs[i];
         CGSize transformedSize = [ESVFrameUtil transformedWithDirection:flexConfig.flexDirection ofSize:config.originSize];
         config.cacheTransformedFrame = CGRectMake(0, 0, transformedSize.width, transformedSize.height);
-        CGFloat headMargin = [config headMarginOfDirection:flexConfig.flexDirection];
+        CGFloat headMargin = headOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection);
         CGFloat currentHead = MAX(previousTailMargin, headMargin);
         if (i != 0) {
             currentHead = MAX(currentHead, flexConfig.spaceBetween);
@@ -127,10 +167,11 @@
         [margins addObject:@(currentHead)];
         total += currentHead;
         total += transformedSize.width;
-        previousTailMargin = [config tailMarginOfDirection:flexConfig.flexDirection];
+        previousTailMargin = tailOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection);
     }
-    [margins addObject:@(previousTailMargin)];
-    total += previousTailMargin;
+    CGFloat lastMargin = MAX(previousTailMargin, tail);
+    [margins addObject:@(lastMargin)];
+    total += lastMargin;
     CGSize result;
     switch (flexConfig.flexDirection) {
         case ESVDirectionRow:
@@ -184,19 +225,21 @@
         } else {
             align = flexConfig.alignItems;
         }
+        CGFloat start = MAX(alignStartOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection), alignStartOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection));
+        CGFloat end = MAX(alignEndOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection), alignEndOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection));
         switch (align) {
             case ESVAlignFlexStart:
-                y = [config alignStartMarginOfDirection:flexConfig.flexDirection];
+                y = start;
                 break;
             case ESVAlignFlexEnd:
-                y = transformedSize.height - itemTransformedRect.size.height - [config alignEndMarginOfDirection:flexConfig.flexDirection];
+                y = transformedSize.height - itemTransformedRect.size.height - end;
                 break;
             case ESVAlignCenter:
                 y = (transformedSize.height - itemTransformedRect.size.height) / 2;
                 break;
             case ESVAlignStretch:
-                y = [config alignStartMarginOfDirection:flexConfig.flexDirection];
-                height = transformedSize.height - [config alignStartMarginOfDirection:flexConfig.flexDirection] - [config alignEndMarginOfDirection:flexConfig.flexDirection];
+                y = start;
+                height = transformedSize.height - start - end;
                 break;
         }
         CGRect transformedFrame = CGRectMake(total, y, itemTransformedRect.size.width, height);

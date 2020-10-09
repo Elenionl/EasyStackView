@@ -26,8 +26,6 @@
 		2C52A32E24440606008FFD73 /* ESVRefreshManageType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A32C24440606008FFD73 /* ESVRefreshManageType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C52A33224440651008FFD73 /* ESVCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A33024440651008FFD73 /* ESVCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C52A33324440651008FFD73 /* ESVCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52A33124440651008FFD73 /* ESVCalculator.m */; };
-		2C52A3362444086E008FFD73 /* ESVStackItemConfig+Axis.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C52A3342444086E008FFD73 /* ESVStackItemConfig+Axis.h */; };
-		2C52A3372444086E008FFD73 /* ESVStackItemConfig+Axis.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C52A3352444086E008FFD73 /* ESVStackItemConfig+Axis.m */; };
 		2C61367724D5BC6B00289776 /* ESVCoupleSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C61367524D5BC6A00289776 /* ESVCoupleSet.h */; };
 		2C61367A24D5C98C00289776 /* ESVCoupleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61367924D5C98C00289776 /* ESVCoupleSet.m */; };
 		2C61367C24D5CF4D00289776 /* Sample3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61367B24D5CF4D00289776 /* Sample3ViewController.swift */; };
@@ -133,8 +131,6 @@
 		2C52A32C24440606008FFD73 /* ESVRefreshManageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVRefreshManageType.h; sourceTree = "<group>"; };
 		2C52A33024440651008FFD73 /* ESVCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVCalculator.h; sourceTree = "<group>"; };
 		2C52A33124440651008FFD73 /* ESVCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESVCalculator.m; sourceTree = "<group>"; };
-		2C52A3342444086E008FFD73 /* ESVStackItemConfig+Axis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ESVStackItemConfig+Axis.h"; sourceTree = "<group>"; };
-		2C52A3352444086E008FFD73 /* ESVStackItemConfig+Axis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ESVStackItemConfig+Axis.m"; sourceTree = "<group>"; };
 		2C61367524D5BC6A00289776 /* ESVCoupleSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESVCoupleSet.h; sourceTree = "<group>"; };
 		2C61367924D5C98C00289776 /* ESVCoupleSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESVCoupleSet.m; sourceTree = "<group>"; };
 		2C61367B24D5CF4D00289776 /* Sample3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample3ViewController.swift; sourceTree = "<group>"; };
@@ -248,8 +244,6 @@
 				9CE3A61CCC1810D020122FB8 /* ESVStackItemConfig.m */,
 				2CF1251B243C58ED00DC254C /* ESVFrameUtil.h */,
 				2CF1251C243C58ED00DC254C /* ESVFrameUtil.m */,
-				2C52A3342444086E008FFD73 /* ESVStackItemConfig+Axis.h */,
-				2C52A3352444086E008FFD73 /* ESVStackItemConfig+Axis.m */,
 				2C49EA1524358DB40026233D /* Info.plist */,
 			);
 			path = EasyStackView;
@@ -268,10 +262,10 @@
 			isa = PBXGroup;
 			children = (
 				2C49EA3124358DC90026233D /* AppDelegate.swift */,
-				2C49EA3524358DC90026233D /* ViewController.swift */,
 				2C49EA3A24358DCB0026233D /* Assets.xcassets */,
 				2C49EA3C24358DCB0026233D /* LaunchScreen.storyboard */,
 				2C49EA3F24358DCB0026233D /* Info.plist */,
+				2C49EA3524358DC90026233D /* ViewController.swift */,
 				2C65A7AE24C58F4600D98D5E /* Sample1ViewController.swift */,
 				2C65A7B024C5A42A00D98D5E /* Sample2ViewController.swift */,
 				2C61367B24D5CF4D00289776 /* Sample3ViewController.swift */,
@@ -384,7 +378,6 @@
 				2CE80DD524F6AB7600B3D5EC /* ESVRecycleManager.h in Headers */,
 				2C61367724D5BC6B00289776 /* ESVCoupleSet.h in Headers */,
 				2C84BC042446F103000FBB20 /* ESVStackPlaceHolder.h in Headers */,
-				2C52A3362444086E008FFD73 /* ESVStackItemConfig+Axis.h in Headers */,
 				2C84BC082446F1E9000FBB20 /* ESVStackItemType.h in Headers */,
 				9CE3A97067E032885ACEBB18 /* ESVStackItemConfig.h in Headers */,
 				2CC3686225128C2000DC7191 /* ESVRecycleCellType.h in Headers */,
@@ -598,7 +591,6 @@
 				2C65A7AD24C58A2300D98D5E /* ESVStackControl.m in Sources */,
 				2CE80DD624F6AB7600B3D5EC /* ESVRecycleManager.m in Sources */,
 				9CE3A6DBAD52A6AAE7EA04C5 /* ESVStackItemConfig.m in Sources */,
-				2C52A3372444086E008FFD73 /* ESVStackItemConfig+Axis.m in Sources */,
 				2C84BC0D2446FF81000FBB20 /* UIView+ESV.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

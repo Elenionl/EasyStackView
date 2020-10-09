@@ -35,6 +35,8 @@ class Sample4ViewController: UIViewController {
         iconHolder.showsHorizontalScrollIndicator = false
         container.addArrangedItem(iconHolder)
         iconHolder.flexDirection = .row
+        iconHolder.padding = .init(top: 5, left: 5, bottom: 5, right: 5)
+        iconHolder.spaceBetween = 5
         container.manageConfig(of: iconHolder) { (config) in
             config?.margin = .init(top: 10, left: 10, bottom: 10, right: 10)
         }
@@ -46,15 +48,6 @@ class Sample4ViewController: UIViewController {
                 icon.backgroundColor = UIColor.white
             }
             iconHolder.addArrangedItem(icon)
-            if i == 4 {
-                iconHolder.manageConfig(of: UInt(i)) { (config) in
-                    config?.margin = .init(top: 0, left: 5, bottom: 0, right: 5)
-                }
-            } else {
-                iconHolder.manageConfig(of: UInt(i)) { (config) in
-                    config?.margin = .init(top: 0, left: 5, bottom: 0, right: 0)
-                }
-            }
         }
         let recycleIconHolder: ESVRecycleView = createRecycleIconHolder()
         recycleIconHolder.showsHorizontalScrollIndicator = false
@@ -66,36 +59,29 @@ class Sample4ViewController: UIViewController {
         recycleIconHolder.registerGenerator({ () -> UIView & ESVRecycleCellType in
             return RecycleIcon()
         }, forIdentifier: "RecycleIcon")
-        for i in 0...10 {
+        recycleIconHolder.padding = .init(top: 5, left: 5, bottom: 5, right: 5)
+        recycleIconHolder.spaceBetween = 5
+        for _ in 0...10 {
             let model: ESVRecyclableModelType = ESVRecyclableModel()
             model.frame = .init(x: 0, y: 0, width: 50, height: 50)
             model.identifier = "RecycleIcon"
             recycleIconHolder.addArrangedItem(model)
-            if i == 10 {
-                recycleIconHolder.manageConfig(of: UInt(i)) { (config) in
-                    config?.margin = .init(top: 0, left: 5, bottom: 0, right: 5)
-                }
-            } else {
-                recycleIconHolder.manageConfig(of: UInt(i)) { (config) in
-                    config?.margin = .init(top: 0, left: 5, bottom: 0, right: 0)
-                }
-            }
         }
         let buttonContainer: ESVStackPlaceHolder = createButtonContainer()
         container.addArrangedItem(buttonContainer)
         buttonContainer.flexDirection = .row
         buttonContainer.alignItems = .stretch
+        buttonContainer.padding = .init(top: 5, left: 5, bottom: 5, right: 5)
+        buttonContainer.spaceBetween = 5
         let confirmButton = createConfirmButton()
         buttonContainer.addArrangedItem(confirmButton)
         buttonContainer.manageConfig(of: confirmButton) { (config) in
             config?.growth = true
-            config?.margin = .init(top: 5, left: 5, bottom: 5, right: 5)
         }
         let cancelButton = createCancelButton()
         buttonContainer.addArrangedItem(cancelButton)
         buttonContainer.manageConfig(of: cancelButton) { (config) in
             config?.growth = true
-            config?.margin = .init(top: 5, left: 5, bottom: 5, right: 5)
         }
         return container
     }

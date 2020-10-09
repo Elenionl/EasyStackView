@@ -20,15 +20,14 @@ class Sample1ViewController: UIViewController {
         view.addSubview(container)
         for i in 0..<4 {
             let item = ESVScrollView(frame: .init(x: 0, y: 0, width: 80, height: 500))
+            item.padding = .init(top: 10, left: 0, bottom: 10, right: 0)
+            item.spaceBetween = 15
             item.backgroundColor = UIColor.white
             item.layer.cornerRadius = 5
             item.justifyContent = .flexStart
             for _ in 0..<(i + 1) * 4 {
                 let cell = ESVStackControl(frame: .init(x: 0, y: 0, width: 60, height: 60))
                 item.addArrangedItem(cell)
-                item.manageConfig(of: cell) { (config) in
-                    config?.margin = .init(top: 30, left: 0, bottom: 0, right: 0)
-                }
                 cell.backgroundColor = UIColor.white
                 cell.layer.cornerRadius = 5
                 cell.layer.shadowColor = UIColor.black.cgColor

@@ -8,7 +8,7 @@
 
 @interface ESVStackItemConfig ()
 
-@property (nonatomic, strong) NSObject<ESVStackItemType> * item;
+@property (nonatomic, strong) NSObject<ESVStackItemType> *item;
 
 @end
 
