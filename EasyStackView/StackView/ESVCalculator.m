@@ -121,8 +121,6 @@ CGFloat alignEndOffsetEdgeInsetDirection(UIEdgeInsets edgeInset, ESVDirection di
         } else {
             align = flexConfig.alignItems;
         }
-        UIEdgeInsets margin = config.margin;
-        UIEdgeInsets padding = flexConfig.padding;
         CGFloat start = MAX(alignStartOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection), alignStartOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection));
         CGFloat end = MAX(alignEndOffsetEdgeInsetDirection(config.margin, flexConfig.flexDirection), alignEndOffsetEdgeInsetDirection(flexConfig.padding, flexConfig.flexDirection));
         switch (align) {
