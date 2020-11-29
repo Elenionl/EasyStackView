@@ -16,7 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface ESVRecyclableModel: NSObject <ESVRecyclableModelType>
+@interface ESVRecyclableModel<ObjectType>: NSObject <ESVRecyclableModelType>
+
+@property (nonatomic, strong) ObjectType payload;
 
 @end
 

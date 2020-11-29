@@ -13,20 +13,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ESVRecyclableModelType, ESVRecycleCellType;
+@protocol ESVStackItemType, ESVRecycleCellType, ESVRecyclableModelType;
 
 @interface ESVRecycleView : UIScrollView <ESVFlexManageType, ESVItemManageType, ESVConfigManageType, ESVRefreshManageType>
 
-- (void)setArrangedItems:(NSArray<NSObject<ESVRecyclableModelType> *> *)items;
-- (void)addArrangedItems:(NSArray<NSObject<ESVRecyclableModelType> *> *)items;
-- (void)addArrangedItem:(NSObject<ESVRecyclableModelType> *)item;
-- (void)deleteArrangedItem:(NSObject<ESVRecyclableModelType> *)item;
-- (void)insertArrangedItem:(NSObject<ESVRecyclableModelType> *)item atIndex:(NSUInteger)index;
+- (void)setArrangedItems:(NSArray<NSObject<ESVStackItemType> *> *)items;
+- (void)addArrangedItems:(NSArray<NSObject<ESVStackItemType> *> *)items;
+- (void)addArrangedItem:(NSObject<ESVStackItemType> *)item;
+- (void)deleteArrangedItem:(NSObject<ESVStackItemType> *)item;
+- (void)insertArrangedItem:(NSObject<ESVStackItemType> *)item atIndex:(NSUInteger)index;
 - (void)deleteAllArrangedItems;
 
-- (ESVStackItemConfig *)configOfItem:(NSObject<ESVRecyclableModelType> *)item;
+- (void)addArrangedRecycableItems:(NSArray<NSObject<ESVRecyclableModelType> *> *)items;
+- (void)addArrangedRecycableItem:(NSObject<ESVRecyclableModelType> *)item;
+- (void)insertArrangedRecycableItem:(NSObject<ESVRecyclableModelType> *)item atIndex:(NSUInteger)index;
 
-- (void)manageConfigOfItem:(NSObject<ESVRecyclableModelType> *)item configAction:(void (^)(ESVStackItemConfig * _Nullable))configAction;
+- (ESVStackItemConfig *)configOfItem:(NSObject<ESVStackItemType> *)item;
+
+- (void)manageConfigOfItem:(NSObject<ESVStackItemType> *)item configAction:(void (^)(ESVStackItemConfig * _Nullable))configAction;
 
 - (void)registerGenerator:(UIView<ESVRecycleCellType> *(^)(void))generator forIdentifier:(NSString *)identifier;
 

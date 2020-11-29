@@ -263,10 +263,18 @@ CGFloat alignEndOffsetEdgeInsetDirection(UIEdgeInsets edgeInset, ESVDirection di
     if (!growthable.count) {
         return space;
     }
-    CGFloat ratio = 1 + space / total;
+    if (total == 0) {
+        CGFloat add = space / growthable.count;
+        for (ESVStackItemConfig *config in growthable) {
+            CGRect rect = config.cacheTransformedFrame;
+            rect.size.width += add;
+            config.cacheTransformedFrame = rect;
+        }
+    }
+    CGFloat ratio = space / total;
     for (ESVStackItemConfig *config in growthable) {
         CGRect rect = config.cacheTransformedFrame;
-        rect.size.width = rect.size.width * ratio;
+        rect.size.width += rect.size.width * ratio;
         config.cacheTransformedFrame = rect;
     }
     return 0;
@@ -282,19 +290,24 @@ CGFloat alignEndOffsetEdgeInsetDirection(UIEdgeInsets edgeInset, ESVDirection di
             [shrinkable addObject:config];
         }
     }
-    if (!shrinkable) {
+    if (!shrinkable.count) {
         return space;
     }
-    CGFloat ratio = 1 - space / total;
-    if (ratio < 0) {
-        ratio = 0;
+    if (total == 0) {
+        return space;
+    }
+    CGFloat ratio = space / total;
+    if (ratio > 1) {
+        ratio = 1;
     }
     for (ESVStackItemConfig *config in shrinkable) {
         CGRect rect = config.cacheTransformedFrame;
-        rect.size.width = rect.size.width * ratio;
+        CGFloat shrink = rect.size.width * ratio;
+        space -= shrink;
+        rect.size.width -= shrink;
         config.cacheTransformedFrame = rect;
     }
-    return ratio == 0 ? total : space;
+    return space;
 }
 
 + (void)updateAroundMargins:(NSMutableArray<NSNumber *> *)margins space:(CGFloat)space {

@@ -17,7 +17,7 @@
 
 @interface ESVRecycleView () <UIScrollViewDelegate>
 
-@property (nonatomic, strong) NSMutableArray<NSObject<ESVRecyclableModelType> *> *privateArrangedItems;
+@property (nonatomic, strong) NSMutableArray<NSObject<ESVStackItemType> *> *privateArrangedItems;
 
 @property (nonatomic, strong) NSMutableArray<__kindof ESVStackItemConfig *> *arrangedConfigs;
 
@@ -114,18 +114,26 @@
     return managedViews;
 }
 
-- (void)setArrangedItems:(NSArray<NSObject<ESVRecyclableModelType> *> *)items {
+- (void)setArrangedItems:(NSArray<NSObject<ESVStackItemType> *> *)items {
     [self deleteAllArrangedItems];
     [self addArrangedItems:items];
 }
 
-- (void)addArrangedItems:(NSArray<NSObject<ESVRecyclableModelType> *> *)items {
-    for (NSObject<ESVRecyclableModelType> *item in items) {
+- (void)addArrangedRecycableItems:(NSArray<NSObject<ESVRecyclableModelType> *> *)items {
+    [self addArrangedItems:items];
+}
+
+- (void)addArrangedItems:(NSArray<NSObject<ESVStackItemType> *> *)items {
+    for (NSObject<ESVStackItemType> *item in items) {
         [self addArrangedItem:item];
     }
 }
 
-- (void)addArrangedItem:(NSObject<ESVRecyclableModelType> *)item {
+- (void)addArrangedRecycableItem:(NSObject<ESVRecyclableModelType> *)item {
+    [self addArrangedItem:item];
+}
+
+- (void)addArrangedItem:(NSObject<ESVStackItemType> *)item {
     if (!item) {
         return;
     }
@@ -140,7 +148,7 @@
     [self markAsDirty];
 }
 
-- (void)deleteArrangedItem:(NSObject<ESVRecyclableModelType> *)item {
+- (void)deleteArrangedItem:(NSObject<ESVStackItemType> *)item {
     if (!item) {
         return;
     }
@@ -152,6 +160,10 @@
     [item esv_removeFromSuperitem];
     [self.arrangedConfigs removeObjectAtIndex:index];
     [self markAsDirty];
+}
+
+- (void)insertArrangedRecycableItem:(NSObject<ESVRecyclableModelType> *)item atIndex:(NSUInteger)index {
+    [self insertArrangedItem:item atIndex:index];
 }
 
 - (void)insertArrangedItem:(ESVRecyclableModel *)item atIndex:(NSUInteger)index {
@@ -289,6 +301,9 @@
     CGFloat hotOffset = 50;
     CGRect hotFrame = CGRectMake(offset.x - hotOffset, offset.y - hotOffset, contentSize.width + 2 * hotOffset, contentSize.height + 2 * hotOffset);
     for (ESVRecyclableModel *model in self.privateArrangedItems) {
+        if (![model conformsToProtocol:@protocol(ESVRecyclableModelType)]) {
+            continue;
+        }
         if (CGRectIntersectsRect(hotFrame, model.frame)) {
             [hotModels addObject:model];
         }
