@@ -10,7 +10,7 @@ import UIKit
 import EasyStackView
 
 class Display: UIView, ESVRecycleCellType {
-    var model: ESVRecyclableModel?
+    var model: ESVRecyclableModel<NSDictionary>?
     
     func prepareForReuse() {
         model = nil
@@ -40,10 +40,10 @@ class Sample3ViewController: UIViewController {
         recycle.addArrangedItems(models)
     }
     
-    let models : [ESVRecyclableModel] = {
-        var result: [ESVRecyclableModel] = []
+    let models : [ESVRecyclableModel<NSDictionary>] = {
+        var result: [ESVRecyclableModel<NSDictionary>] = []
         for _ in 0..<1000 {
-            let model = ESVRecyclableModel()
+            let model = ESVRecyclableModel<NSDictionary>()
             model.frame = CGRect(x: 0, y: 0, width: 50 + Int(arc4random()) % 240, height: 20 + Int(arc4random()) % 40)
             model.identifier = "display"
             result.append(model)

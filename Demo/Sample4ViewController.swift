@@ -62,7 +62,7 @@ class Sample4ViewController: UIViewController {
         recycleIconHolder.padding = .init(top: 5, left: 5, bottom: 5, right: 5)
         recycleIconHolder.spaceBetween = 5
         for _ in 0...10 {
-            let model: ESVRecyclableModelType = ESVRecyclableModel()
+            let model: ESVRecyclableModelType = ESVRecyclableModel<NSDictionary>()
             model.frame = .init(x: 0, y: 0, width: 50, height: 50)
             model.identifier = "RecycleIcon"
             recycleIconHolder.addArrangedItem(model)
